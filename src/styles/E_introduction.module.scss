@@ -1,0 +1,332 @@
+@use '@styles/index' as *;
+
+.E_introduction {
+    width: 100%; min-height: 100vh;
+    overflow-y: auto;
+    @include flex-center;
+    flex-direction: column;
+
+    header, footer {
+        width: 100%; height: auto;
+    }
+
+    header {
+        z-index: $z-index-header;
+
+        @media (min-width: $breakpoint-sm) {
+            padding: 0 $padding-sm;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            padding: 0 $padding-md * 2;
+        }
+    }
+
+    .container {
+        width: 100%; flex: 1;
+        @include flex-center; gap: 4rem;
+        flex-direction: column;
+        
+        @media (min-width:$breakpoint-sm) {
+            padding: 0 $padding-lg;
+        }
+
+        @media (min-width:$breakpoint-md) {
+            padding: 0 $padding-xl * 4;
+        }
+    }
+
+    .section1 {
+        width: 100%; height: auto;
+        @include flex-center;
+        flex-direction: column;
+    }
+
+    //HeroSection
+    .title {
+        width: 100%; height: auto;
+        border-bottom: 1px solid $color-text-gray;
+        @include flex-between; gap: 4rem;
+
+        @media (min-width: $breakpoint-sm) {
+            padding-bottom:  $padding-md;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            padding-bottom:  $padding-md * 2;
+        }
+
+        .right {
+            @media (max-width: $breakpoint-sm) {
+                display: flex; flex-direction: column; gap: 1rem;
+                align-items: flex-end; justify-content: flex-end;
+            }
+
+            @media (min-width: $breakpoint-md) {
+                display: flex; flex-direction: row; gap: 3rem;
+                align-items: flex-end; justify-content: flex-end;
+            }
+        }
+
+        .item {
+            width: auto; height: 3rem;
+            display: flex; align-items: flex-end;
+            flex-direction: column; justify-content: center;
+
+            h1 {
+                font-weight: $text-weight-lg;
+                letter-spacing: .1rem;
+
+                @media (min-width:$breakpoint-sm) {
+                    font-size: $text-size-sm;
+                }
+
+                @media (min-width:$breakpoint-md) {
+                    font-size: $text-size-xl;
+                }
+            }
+
+            span {
+                font-weight: $text-weight-sm;
+                letter-spacing: .1rem;
+                color: $color-text-gray;
+                @media (min-width:$breakpoint-sm) {
+                    font-size: $text-size-2xs;
+                }
+
+                @media (min-width:$breakpoint-md) {
+                    font-size: $text-size-sm;
+                }
+            }
+        }
+    }
+
+    .videoContainer {
+        width: 100%; height: auto;
+        @include flex-center;
+        aspect-ratio: 16 / 9;
+        border-bottom: 1px solid $color-text-gray;
+
+        @media (min-width: $breakpoint-sm) {
+            padding:  $padding-md $padding-sm;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            padding: $padding-md * 2 $padding-md * 2 ;
+        }
+    }
+
+    .buttonGroup {
+        width: 100%; height: auto;
+        @include flex-center; 
+
+        @media (min-width: $breakpoint-sm) {
+            gap: 1rem;
+            padding: $padding-sm $padding-sm $padding-md;
+            //border-bottom: 1px solid $color-text-gray;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            gap: 4rem;
+            padding: $padding-md * 2 $padding-md * 2;
+            border-bottom: 1px solid $color-text-gray;
+        }
+    }
+
+    .descriptionContainer {
+        width: 100%; height: auto;
+        @include flex-between; gap: 4rem;
+        flex-direction: column;
+        border-bottom: 1px solid $color-text-gray;
+
+        @media (min-width: $breakpoint-sm) {
+            padding: $padding-md * 2 $padding-md;
+            flex-direction: column;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            padding: $padding-lg * 2 $padding-md * 2;
+            flex-direction: row;
+
+            .left {
+                flex: 7;
+            }
+
+            .right {
+                flex: 3;
+            }
+        }
+
+        .introduction {
+            width: 100%; height: auto;
+            @include flex-center;
+            flex-direction: column;
+
+            @media (min-width: $breakpoint-sm) {
+                gap: $padding-md;
+                border-bottom: 1px solid $color-text-gray;
+
+                h1 {
+                    font-size: $text-size-xl;
+                }
+
+                .description {
+                    display: flex; flex-direction: column;
+                    font-size: $text-size-md;
+                    line-height: 1.5rem;
+
+                    .korean {
+                        gap: 1rem;
+                    }
+
+                    .english {
+                        gap: .5rem;
+                    }
+                }
+            }
+
+            @media (min-width: $breakpoint-md) {
+                gap: $padding-lg;
+                border-bottom: none;
+
+                h1 {
+                    font-size: $title-size-lg;
+                }
+
+                .description {
+                    display: flex; flex-direction: column;
+                    font-size: $text-size-lg;
+                    line-height: 2rem;
+
+                    .korean {
+                        gap: 1rem;
+                    }
+
+                    .english {
+                        gap: 1rem;
+                    }
+                }
+            }
+        }
+
+        .participation {
+            width: 100%; height: auto;
+            display: flex; flex-direction: row;
+            align-items: baseline;
+
+            @media (min-width: $breakpoint-sm) {
+                padding: 0 $padding-md * 2 $padding-lg * 2;
+                gap: $padding-md * 2;
+
+                h1 {
+                    font-size: $text-size-xl;
+                }
+
+                h2 {
+                    font-size: $text-size-lg;
+                }
+
+                p {
+                    font-size: $text-size-sm;
+                }
+
+                .people,.info {
+                    display: flex; flex-direction: column;
+                    gap: 1rem;
+                }
+            }
+
+            @media (min-width: $breakpoint-md) {
+                gap: $padding-lg * 2;
+
+                h1 {
+                    font-size: $title-size-lg;
+                }
+
+                h2 {
+                    font-size: $text-size-xl;
+                }
+
+                p {
+                    font-size: $text-size-md;
+                }
+
+                .people,.info {
+                    display: flex; flex-direction: column;
+                    gap: 2rem;
+                }
+            }
+
+            .item {
+                h2 {
+                    color: $color-text-gray;
+                }
+            }
+        }
+    }
+
+    //KakaoMap
+    section {
+        width: 100%; height: auto;
+        @include flex-center;
+    }
+
+    .map {
+        width: 100%; height: auto;
+        @include flex-center;
+        flex-direction: column;
+        border-bottom: 1px solid $color-text-gray;
+
+        @media (min-width: $breakpoint-sm) {
+            padding: 0 $padding-lg $padding-md * 2;
+            gap: $padding-lg;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            padding: 0 $padding-xl * 2 $padding-lg * 2;
+            gap: $padding-xl * 2;
+        }
+        
+        .info {
+            width: 100%; height: auto;
+            display: grid; grid-template-columns: 1fr 1fr;
+
+            @media (min-width: $breakpoint-sm) {
+                gap: 1rem;
+            }
+
+            @media (min-width: $breakpoint-md) {
+                gap: 2rem;
+            }
+
+            .item {
+                display: flex; align-items: center;
+
+                @media (min-width: $breakpoint-sm) {
+                    gap: 1rem;
+
+                    svg {
+                        width: 1.5rem; height: 1.5rem;
+                    }
+
+                    p {
+                        font-size: $text-size-sm;
+                    }
+                }
+
+                @media (min-width: $breakpoint-md) {
+                    gap: 2rem;
+
+                    svg {
+                        width: 2rem; height: 2rem;
+                    }
+
+                    p {
+                        font-size: $text-size-lg;
+                    }
+                }
+            }
+        }
+    }
+}
+

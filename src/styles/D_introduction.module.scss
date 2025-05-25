@@ -1,0 +1,405 @@
+@use '@styles/index.scss' as *;
+
+.D_introduction {
+    width: 100%; min-height: 100vh;
+    overflow-y: auto;
+    @include flex-center;
+    flex-direction: column;
+
+    header, footer {
+        width: 100%; height: auto;
+    }
+
+    header {
+        z-index: $z-index-header;
+
+        @media (min-width: $breakpoint-sm) {
+            padding: 0 $padding-sm;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            padding: 0 $padding-md * 2;
+        }
+    }
+
+    section {
+        width: 100%; height: auto;
+
+        h1 {
+            text-align: center;
+        }
+    }
+
+    .container {
+        width: 100%; flex: 1;
+        @include flex-center; gap: 4rem;
+        flex-direction: column;
+        
+        @media (min-width:$breakpoint-sm) {
+            padding: 0 $padding-lg;
+        }
+
+        @media (min-width:$breakpoint-md) {
+            padding: 0 $padding-xl * 4;
+        }
+    }
+
+    //header
+    .titleContainer {
+        width: 100%; height: auto;
+        display: flex; flex-direction: row;
+        justify-content: space-between;
+
+        @media (min-width: $breakpoint-sm) {
+            letter-spacing: .1rem;
+            padding: $padding-lg $padding-lg * 2;
+
+            .title {
+                display: flex; flex-direction: column;
+                gap: .5rem;
+
+                h1 {
+                    font-size: $text-size-lg;
+                }
+
+                span {
+                    font-size: $text-size-xs;
+                    color: $color-text-gray;
+                }
+            }
+
+            .info {
+                width: auto; height: auto;
+                display: flex; flex-direction: column;
+                justify-content: flex-end;
+
+                h2 {
+                    font-size: $text-size-xs;
+                    color: $color-text-gray;
+                }
+            }
+        }
+
+        @media (min-width: $breakpoint-md) {
+            letter-spacing: .15rem;
+            padding: $padding-xl * 2 $padding-xl * 4;
+
+            .title {
+                h1 {
+                    font-size: $text-size-xl;
+                }
+
+                span {
+                    font-size: $text-size-sm;
+                }
+            }
+
+            .info {
+                h2 {
+                    font-size: $text-size-sm;
+                }
+            }
+        }
+    }
+
+    //section1
+    .videoContainer {
+        width: 100%; height: auto;
+        aspect-ratio: 16 / 9;
+        @include flex-center;
+        border-top: 1px solid $color-text-gray;
+        border-bottom: 1px solid $color-text-gray;
+
+        @media (min-width: $breakpoint-sm) {
+            padding:  $padding-lg * 2 $padding-sm * 2 $padding-lg * 2;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            padding: $padding-xl * 2 $padding-md * 2 $padding-xl * 2;
+        }
+    }
+
+    //section2
+    .profileContainer {
+        margin-top: $margin-lg * 2;
+        width: 100%; height: auto;
+
+        @media (min-width: $breakpoint-sm) {
+            padding: 0 $padding-md * 2;
+            display: grid; gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        }
+
+        @media (min-width: $breakpoint-md) {
+            padding: 0 $padding-xl * 4;
+            display: grid; gap: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        }
+
+        .profileCard {
+            width: 100%; height: auto;
+            border-radius: $radius-md;
+            border: 1px solid $color-text-gray;
+            box-shadow: 0 0 10px 0 rgba($color-text-gray, .5);
+            padding: $padding-md;
+
+            .top {
+                width: 100%; height: auto;
+                display: flex; flex-direction: row;
+                align-items: center; justify-content: center;
+                border-bottom: 1px solid $color-text-gray;
+
+                .image {
+                    width: auto; height: auto;
+
+                    img {
+                        width: 100%; height: 100%; object-fit: cover;
+                    }
+                }
+
+                .info {
+                    width: auto; height: auto;
+                    display: flex; flex-direction: column;
+                }
+
+                @media (min-width: $breakpoint-sm) {
+                    padding: $padding-lg 0;
+
+                    h3 {
+                        font-size: $text-size-lg;
+                    }
+
+                    p {
+                        font-size: $text-size-sm;
+                    }
+
+                    .info {
+                        margin-left: 2rem;
+                        gap: 1rem;
+                    }
+                }
+
+                @media (min-width: $breakpoint-md) {
+                    padding: $padding-xl $padding-xl;
+
+                    h3 {
+                        font-size: $text-size-xl;
+                    }
+
+                    p {
+                        font-size: $text-size-md;
+                    }
+
+                    .info {
+                        margin-left: 4rem;
+                        gap: 1.5rem;
+                    }
+                }
+            }
+            
+            .bottom {
+                width: 100%; height: auto;
+                display: flex; flex-direction: column;
+
+                .item {
+                    display: flex; flex-direction: column;
+                }
+                @media (min-width: $breakpoint-sm) {
+                    padding: $padding-lg $padding-xl;
+                    gap: 1rem;
+
+                    .item {
+                        gap: 1rem;
+
+                        li {
+                            list-style:circle;
+                            font-size: $text-size-sm;
+                        }
+                    }
+                }
+                
+                @media (min-width: $breakpoint-md) {
+                    padding: $padding-xl * 2 $padding-xl * 2;
+                    gap: 2rem;
+
+                    .item {
+                        gap: 1rem;
+
+                        li {
+                            list-style:circle;
+                            font-size: $text-size-md;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //section3
+    .textCard {
+        margin-top: $margin-lg * 2;
+        width: 100%; height: 50rem;
+        border-top: 1px solid $color-text-gray;
+        border-bottom: 1px solid $color-text-gray;
+        overflow: hidden;
+
+        @media (min-width: $breakpoint-sm) {
+            .index {
+                padding: $padding-lg $padding-sm;
+                width: 100%; height: auto;
+                display: flex; flex-direction: row; gap: .5rem;
+                align-items: center; justify-content: center;
+
+                .item {
+                    width: auto; height: auto;
+                    display: flex; flex-direction: column;
+                    gap: .5rem;
+                    color: $color-text-gray;
+
+                    h3 {
+                        font-size: $text-size-sm;
+
+                        &.active {
+                            color: $color-white;
+                            font-weight: $text-weight-lg;
+                            text-shadow: 0 0 10px $color-white;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    &:hover {
+                        color: $color-white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: $breakpoint-md) {
+            padding: 0 $padding-xl * 4;
+            display: flex; flex-direction: column;
+
+            .index {
+                width: 100%; height: auto;
+                display: flex; flex-direction: row;
+                align-items: center; justify-content: center;
+                gap: 4rem;
+                padding: $padding-xl * 2 $padding-md * 2;
+
+                .item {
+                    width: auto; height: auto;
+                    display: flex; flex-direction: column;
+                    gap: 1rem;
+
+                    h3 {
+                        font-size: $text-size-xl;
+
+                        &.active {
+                            color: $color-white;
+                            font-weight: $text-weight-lg;
+                            text-shadow: 0 0 10px $color-white;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    &:hover {
+                        color: $color-white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .slide {
+            width: 100%; height: 40rem;
+            display: flex; flex-direction: row;
+            border-radius: $radius-md;
+            padding: $padding-md;
+            overflow-x: scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            -webkit-overflow-scrolling: touch;
+            transition: transform .5s ease-in-out;
+            will-change: transform;
+
+            .container {
+                min-width: 100%; 
+                flex-shrink: 0;
+                background-color: beige;
+                color: $color-text-gray;
+
+                @media (min-width: $breakpoint-sm) {
+                    min-width: 340px;
+                }
+
+                @media (min-width: $breakpoint-md) {
+                    min-width: 640px;
+                }
+            }
+        }
+    }
+
+    //section4
+    .photo {
+        border-bottom: 1px solid $color-text-gray;
+        @include flex-center;
+
+        @media (min-width: $breakpoint-sm) {
+            width: 100%; height: 40vh;
+            padding: $padding-lg;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            width: 100%; height: 100vh;
+            padding: $padding-xl * 2;
+        }
+
+        .photoContainer {
+            width: 100%; height: 100%;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+
+            .item {
+                width: 100%; height: 100%;
+
+                .canvas {
+                    width: 100%; height: 100%;
+                }
+            }
+
+            .thumbnail {
+                width: 100%; height: auto;
+                display: flex; flex-direction: row;
+                align-items: center; justify-content: center;
+                opacity: $opacity-50;
+                cursor: pointer;
+
+                @media (min-width: $breakpoint-sm) {
+                    overflow-x: scroll;
+                    overflow-y: hidden;
+                    scrollbar-width: none;
+                    -ms-overflow-style: none;
+                    -webkit-overflow-scrolling: touch;
+                    gap: 1rem;
+
+                    img {
+                        width: 100px; height: 60px;
+                        object-fit: cover;
+                    }
+                }
+                @media (min-width: $breakpoint-md) {
+                    gap: 2rem;
+
+                    img {
+                        width: 150px; height: 90px;
+                    }
+                }
+
+                &.active {
+                    opacity: $opacity-100;
+                }
+            }
+        }
+
+    }
+}

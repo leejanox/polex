@@ -1,0 +1,71 @@
+//색
+$color-white: #f9fafb;
+$color-black: #111827;
+$color-muted: #9ca3af;
+$color-text-gray: #686868;
+$color-navy: #374151;
+$color-danger: #ef4444;
+$color-success: #10b981;
+$color-accent: #fffd97;
+$color-primary: #bdbaf7;
+$color-secondary: #8564be;
+
+//폰트 사이즈
+
+$text-size-2xs: 8px;
+$text-size-xs: 10px;
+$text-size-sm: 12px;
+$text-size-md: 14px;
+$text-size-lg: 16px;
+$text-size-xl: 18px;
+$title-size-sm: 20px;
+$title-size-md: 24px;
+$title-size-lg: 28px;
+$title-size-xl: 32px;
+
+//폰트 두께
+$text-weight-sm: 300;
+$text-weight-md: 400;
+$text-weight-lg: 700;
+
+//Z index
+$z-index-header: 100;
+$z-index-modal: 200;
+$z-index-toast: 300;
+$z-index-tooltip: 400;
+$z-index-dropdown: 500;
+$z-index-overlay: 600;
+
+//패딩
+$padding-xs: 4px;
+$padding-sm: 8px;
+$padding-md: 12px;
+$padding-lg: 16px;
+$padding-xl: 20px;
+
+//마진
+$margin-xs: 4px;
+$margin-sm: 8px;
+$margin-md: 12px;
+$margin-lg: 16px;
+$margin-xl: 20px;
+
+//라운드
+$radius-xs: 4px;
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+$radius-xl: 20px;
+
+//브레이크 포인트 
+$breakpoint-sm: 340px;
+$breakpoint-md: 640px;
+$breakpoint-lg: 1024px;
+
+
+
+//투명도
+$opacity-0: 0;
+$opacity-50: .5;
+$opacity-75: .75;
+$opacity-100: 1;

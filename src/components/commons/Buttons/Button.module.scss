@@ -1,0 +1,31 @@
+@use '@styles/index.scss' as *;
+
+.button1 {
+    width: 12rem; height: 3rem;
+    background-color: transparent; color: inherit;
+    font-size: $text-size-md; font-weight: 400;
+
+    button {
+        width: 100%; height: 100%;
+    }
+
+    &.active {
+        color: $color-muted;
+    }
+}
+
+.button2 {
+    width: 10rem; height: 3rem;
+    border-bottom: 1px solid $color-white;
+    //border-radius: $radius-sm;
+    background-color: transparent; color: inherit;
+    font-size: $text-size-md; font-weight: 400;
+
+    button {
+        width: 100%; height: 100%;
+    }
+
+    &.active {
+        color: $color-muted;
+    }
+}

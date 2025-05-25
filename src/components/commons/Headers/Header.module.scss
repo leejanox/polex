@@ -1,0 +1,117 @@
+@use '@styles/index.scss' as *;
+
+.MainHeader {
+    position: relative;
+    width: 100%; height: 4rem; 
+    padding: $padding-lg * 2 $padding-lg;
+    @include flex-between;
+
+    @media (min-width:$breakpoint-md) {
+        padding: $padding-xl * 2 $padding-xl * 2;
+    }
+
+    &.item {
+        width: fit-content;
+        color: $color-white;
+    }
+
+    &.left {
+        svg {
+            width: 1.5rem; height: 1.5rem;
+            fill: $color-white;
+
+            @media (min-width:$breakpoint-md) {
+                width: 2rem; height: 2rem;
+            }
+        }
+    }
+
+    &.right {
+        @include flex-center; gap: 1rem;
+
+        p {
+            opacity: $opacity-0;
+        }
+
+        svg {
+            @media (min-width:$breakpoint-md) {
+                width: 2.5rem; height: 2.5rem;
+            }
+        }
+
+        &:hover {
+            p {
+                opacity: $opacity-100;
+            }
+        }
+    }
+
+
+    @media (min-width:$breakpoint-sm) {
+
+        .modal {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; min-height: 100svh;
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+            color: $color-white;
+            @include flex-center;
+            flex-direction: column; gap: 4rem;
+            z-index: $z-index-modal;
+    
+            li {
+                position: relative;
+                @include flex-center;
+    
+                &::after {
+                    position: absolute;
+                    left: 0; bottom: -2px;
+                    display: block;
+                    background-color: $color-white;
+                    content: '';
+                    width: 0; height: 1.5px;
+                }
+    
+                &:hover::after {
+                    width: 100%;
+                    transition: width .3s ease-in forward;
+                }
+            }
+        }        
+    }
+
+    @media (min-width:$breakpoint-md) {
+        
+        .modal {
+            position: absolute;
+            top: 4rem; left: 0;
+            width: 100%; min-height: 50svh;
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+            color: $color-white;
+            @include flex-center;
+            flex-direction: column; gap: 4rem;
+            z-index: $z-index-modal;
+    
+            li {
+                position: relative;
+                @include flex-center;
+    
+                &::after {
+                    position: absolute;
+                    left: 0; bottom: -2px;
+                    display: block;
+                    background-color: $color-white;
+                    content: '';
+                    width: 0; height: 1.5px;
+                }
+    
+                &:hover::after {
+                    width: 100%;
+                    transition: width .3s ease-in forward;
+                }
+            }
+        }        
+    }
+}
