@@ -1,0 +1,177 @@
+@use '@styles/index' as *;
+
+.Senior {
+    width: 100%; min-height: 100vh;
+    overflow-y: auto;
+    @include flex-center;
+    flex-direction: column;
+
+    header, footer {
+        width: 100%; height: auto;
+    }
+    
+    .container {
+        width: 100%; flex: 1;
+        @include flex-center;
+        flex-direction: column;
+    }
+
+    .content {
+        width: 100%; flex: 1;
+        @include flex-center;
+        flex-direction: column;
+    }
+
+    .title {
+        width: 100%; height: auto;
+        @include flex-center;
+    }
+
+    .filter {
+        width: 100%; height: auto;
+    }
+    
+    @media (min-width:$breakpoint-sm) {
+        h1 {
+            font-size: $title-size-md;
+        }
+        
+        p {
+            font-size: $text-size-sm;
+        }
+
+        .container {
+            gap: 1rem;
+        }
+
+        .filter {
+            @include flex-center; flex-direction: row;
+            gap: 1.5rem;
+        }
+
+        .content {
+            gap: 3rem;
+        }
+    }
+
+    @media (min-width:$breakpoint-md) {
+        h1 {
+            font-size: $title-size-lg;
+        }
+
+        p {
+            font-size: $text-size-md;
+        }
+
+        .container {
+            gap: 2rem;
+        }
+
+        .filter {
+            padding: 0 $padding-xl * 6;
+            display: flex; flex-direction: row;
+            align-items: center; justify-content: flex-start;
+            gap: 2rem;
+        }
+
+        .content {
+            gap: 4rem;
+        }
+    }
+
+
+    // 2024년 작품 카드
+    .SeniorCard {
+        width: 100%; height: auto;
+        display: flex;
+        background-color: black;
+        color: white;
+        padding: 1em;
+        gap: 1em;
+        border-bottom: 1px solid #333;
+        flex-wrap: wrap;
+
+        @media (min-width:$breakpoint-sm) {
+            padding: $padding-sm $padding-xl * 2;
+            gap: 2em;
+
+            .image {
+                width: 400px;
+            }
+        }
+
+        @media (min-width:$breakpoint-md) {
+            padding: $padding-md $padding-xl * 4;
+            gap: 3em;
+
+            .image {
+                width: 300px;
+            }
+        }
+    }
+
+    .image {
+        height: auto;
+        object-fit: cover;
+    }
+
+    .info {
+        flex: 1;
+        min-width: 200px;
+    
+        .category {
+            font-size: 0.8em;
+            color: #888;
+        }
+        
+        .title {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .museum,
+        .location,
+        .date,
+        .remaining {
+            font-size: 0.9em;
+            margin-top: 0.2em;
+        }
+    }
+
+    .descriptionBox {
+        flex: 1;
+        min-width: 300px;
+        position: relative;
+    
+        .description {
+            font-size: 0.85em;
+            line-height: 1.4;
+        }
+    
+        .more {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: none;
+            color: white;
+            border: 1px solid white;
+            padding: 0.3em 1em;
+            cursor: pointer;
+        }
+    }
+
+    .videoWrapper {
+        margin-top: 1em;
+        width: 100%;
+
+        video {
+            object-fit: cover;
+        }
+    }
+
+    // 2025년 작품 카드
+    .SeniorCard2 {
+        width: 100%; height: auto;
+    }
+}
+

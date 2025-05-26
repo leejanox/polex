@@ -5,6 +5,8 @@ import { photos, ProfileCard, TextCard, type ProfileCardProps, type TextData } f
 import { Professor, Text, Photo } from '@components/D_introduction';
 import ReactPlayer from 'react-player';
 import { useState } from 'react';
+import { ArrowRight, Download } from 'lucide-react';
+import { U_Button } from '@components/commons/Buttons';
 
 export const D_introduction = () => {
 
@@ -49,6 +51,20 @@ export const D_introduction = () => {
                 <section id="section3">
                     <h1>학과소개</h1>
                     <TextCard List={text} data={text[0]}/>
+                    <div className={styles.linkContainer}>
+                        <U_Button>
+                            <a href="https://www.kpu.ac.kr/kpu/index.do" target="_blank" rel="noreferrer noopener">
+                                <span>학과 홈페이지</span>
+                                <ArrowRight/>
+                            </a>
+                        </U_Button>
+                        <U_Button>
+                            <a href='/assets/deDown.pdf' download>
+                                <span>학과소개서 다운로드</span>
+                                <Download/>
+                            </a>
+                        </U_Button>
+                    </div>
                 </section>
 
                 <section id="section4">
