@@ -6,6 +6,7 @@ import { Junior } from '@pages/Junior'
 import { Review } from '@pages/Review'
 import { Senior } from '@pages/Senior'
 import { Routes, Route } from 'react-router-dom'
+import { Temi } from '@components/Students/Temi'
 
 export const Router = () => {
 
@@ -17,6 +18,8 @@ export const Router = () => {
         <Routes>
             <Route path='/senior' element={<Senior/>} />
             <Route path='/2학년' element={<Senior/>} />
+            <Route path='/senior/토리' element={<Temi/>} />
+            <Route path='/senior/VR' element={<Temi/>} />
 
             <Route path='/highTech' element={<HighTech/>} />
             <Route path='/하이테크' element={<HighTech/>} />

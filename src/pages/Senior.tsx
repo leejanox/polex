@@ -2,14 +2,15 @@ import { SeniorCard } from '@components/Students';
 import { MainHeader } from '@components/commons/Headers';
 import { MainFooter } from '@components/commons/Footers';
 import styles from '@styles/Senior.module.scss';
-import { SeniorData } from '@components/Students';
+import { SeniorData2024, SeniorData2025 } from '@components/Students';
 import { useState } from 'react';
-import { U_Button } from '@components/commons/Buttons';
-import { SeniorCard2 } from '@components/Students';
+import { U_Button } from '@components/commons/Buttons'
+import clsx from 'clsx';
 
 export const Senior = () => {
 
-    const datas = SeniorData;
+    const data2024 = SeniorData2024;
+    const data2025 = SeniorData2025;
 
     const [past, setPast] = useState(false);
 
@@ -40,13 +41,15 @@ export const Senior = () => {
                 </div>
                 {past ? (
                     <div className={styles.content}>
-                        {datas.map((v,i)=>(
+                        {data2024.map((v,i)=>(
                             <SeniorCard key={i} data={v.data}/>
                         ))}
                     </div>
                 ) : (
-                    <div className={styles.content}>
-                        <SeniorCard2 />
+                    <div className={clsx(styles.content, styles._2025)}>
+                        {data2025.map((v,i)=>(
+                            <SeniorCard key={i} data={v.data} style='2025'/>
+                        ))}
                     </div>
                 )}
             </div>

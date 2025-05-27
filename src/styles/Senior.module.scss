@@ -20,8 +20,19 @@
         width: 100%; flex: 1;
         @include flex-center;
         flex-direction: column;
+
+        &._2025 {
+            @media (min-width:$breakpoint-md) {
+                padding: $padding-md $padding-xl * 4;
+                flex-direction: row; 
+                flex-wrap: nowrap;
+            }
+        }
     }
 
+
+
+    // 2024년 작품 카드
     .title {
         width: 100%; height: auto;
         @include flex-center;
@@ -79,21 +90,17 @@
         }
     }
 
-
-    // 2024년 작품 카드
     .SeniorCard {
         width: 100%; height: auto;
         display: flex;
-        background-color: black;
-        color: white;
         padding: 1em;
         gap: 1em;
         border-bottom: 1px solid #333;
         flex-wrap: wrap;
 
         @media (min-width:$breakpoint-sm) {
-            padding: $padding-sm $padding-xl * 2;
-            gap: 2em;
+            padding: $padding-sm $padding-xl * 2 $padding-xl;
+            gap: .5em;
 
             .image {
                 width: 400px;
@@ -101,11 +108,24 @@
         }
 
         @media (min-width:$breakpoint-md) {
-            padding: $padding-md $padding-xl * 4;
+            padding: $padding-md $padding-xl * 4 $padding-xl * 2;
             gap: 3em;
 
             .image {
                 width: 300px;
+            }
+        }
+
+        &._2025 {
+            
+            @media (min-width:$breakpoint-md) {
+                box-shadow: 0 0 0 1px rgba(255,255,255,0.1),
+                            0 0 0 2px rgba(255,255,255,0.05),
+                            0 0 0 3px rgba(255,255,255,0.025),
+                            0 0 0 4px rgba(255,255,255,0.01);
+                width: 100%; height: auto;
+                padding: $padding-xl $padding-xl;
+                gap: 2rem;
             }
         }
     }
@@ -117,61 +137,256 @@
 
     .info {
         flex: 1;
-        min-width: 200px;
+        max-width: 300px;
+        
+        @media (min-width:$breakpoint-sm) {
+            padding: $padding-md $padding-sm;
+            font-size: $text-size-sm;
+            
+            .category {
+                font-size: $text-size-xs;
+                color: #888;
+            }
+            
+            .title {
+                width: fit-content;
+                font-size: $title-size-md;
+                font-weight: bold;
+            }
     
-        .category {
-            font-size: 0.8em;
-            color: #888;
+            .skillContainer {
+                display: flex;
+                flex-direction: row;
+    
+                .skill {
+                    width: fit-content;
+                    border: 1px solid white;
+                    padding: 0.2em 0.5em;
+                    border-radius: $radius-sm;
+                    font-size: $text-size-sm;
+                }    
+
+                @media (min-width:$breakpoint-sm) {
+                    gap: .5em;
+                }
+
+                @media (min-width:$breakpoint-md) {
+                    gap: 1em;
+                }
+
+                &._2025 {
+
+                    @media (min-width:$breakpoint-sm) {
+                        gap: .5em;
+                    }
+
+                    @media (min-width:$breakpoint-md) {
+                        flex-direction: column;
+                        gap: .5em;
+                    }
+                }
+            }
+
+            .team {
+                font-size: $text-size-md;
+            }
+
+            .team,
+            .date,
+            .title,
+            .skillContainer,
+            .remaining {
+                margin-top: 0.5em;
+            }
         }
-        
-        .title {
-            font-size: 1.2em;
-            font-weight: bold;
+
+        @media (min-width:$breakpoint-md) {
+            padding: $padding-lg $padding-md;
+            gap: 2em;
+            font-size: $text-size-md;
+
+            .category {
+                font-size: $text-size-md;
+                color: #888;
+            }
+            
+            .title {
+                width: fit-content;
+                font-size: $title-size-md;
+                font-weight: bold;
+            }
+
+            .team {
+                font-size: $text-size-lg;
+            }
+    
+            .skillContainer {
+                display: flex;
+                flex-direction: row;
+            }
+    
+            .skill {
+                width: fit-content;
+                border: 1px solid white;
+                padding: 0.2em 0.5em;
+                border-radius: $radius-sm;
+                font-size: $text-size-sm;
+            }
+            
+            .team,
+            .title,
+            .skillContainer,
+            .date,
+            .remaining {
+                margin-top: .7em;
+            }
         }
-        
-        .museum,
-        .location,
-        .date,
-        .remaining {
-            font-size: 0.9em;
-            margin-top: 0.2em;
+    }
+
+    .introduction {
+
+        max-width: 300px;
+
+        @media (min-width:$breakpoint-sm) {
+            padding: $padding-md $padding-sm 0;
+
+            h3 {
+                font-size: $text-size-lg;
+                color: $color-text-gray;
+                margin-bottom: .5rem;
+            }
+        }
+
+        @media (min-width:$breakpoint-md) {
+            flex: 1;
+            padding: $padding-lg $padding-md;
+
+            h3 {
+                font-size: $text-size-xl;
+                color: $color-text-gray;
+                margin-bottom: 1rem;
+            }
+        }
+
+        &._2025 {
+            @media (min-width:$breakpoint-md) {
+                h3 {
+                    font-size: $text-size-lg;
+                }
+            }
         }
     }
 
     .descriptionBox {
-        flex: 1;
-        min-width: 300px;
-        position: relative;
-    
-        .description {
-            font-size: 0.85em;
-            line-height: 1.4;
+        display: flex;
+
+        li:nth-of-type(2),
+        li:nth-of-type(4),
+        li:nth-of-type(6) {
+            list-style: disc;
         }
+
+        @media (min-width:$breakpoint-sm) {
+            padding: $padding-md $padding-sm;
+            flex-direction: column;
+            gap: 1em;
+
+            .description {
+                min-width: 300px;
+                font-size: $text-size-sm;
+                line-height: 1.7;
+
+                h3 {
+                    font-size: $text-size-lg;
+                    color: $color-text-gray;
+                    margin-bottom: .5rem;
+                }
+            }
+
+            .more {
+                font-size: $text-size-sm;
+            }
+        }
+
+        @media (min-width:$breakpoint-md) {
+            padding: $padding-lg;
+            flex-direction: row;
+            gap: 2em;
+                
+            .description {
+                width: 600px;
+                font-size: $text-size-md;
+                line-height: 1.8;
+
+                h3 {
+                    font-size: $text-size-xl;
+                    color: $color-text-gray;
+                    margin-bottom: 1rem;
+                }
+            }
+
+            .more {
+                font-size: $text-size-md;
+            }
+        }
+
     
         .more {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background: none;
             color: white;
             border: 1px solid white;
+            border-radius: $radius-sm;
             padding: 0.3em 1em;
             cursor: pointer;
+            background-color: transparent;
         }
     }
 
     .videoWrapper {
         margin-top: 1em;
-        width: 100%;
+        will-change: opacity, transform;
 
-        video {
-            object-fit: cover;
+        @media (min-width:$breakpoint-sm) {
+            width: 100%;
+            min-height: 300px;
+            height: auto;
+        }
+
+        @media (min-width:$breakpoint-md) {
+            width: 100%;
+            height: 100vh;
         }
     }
 
-    // 2025년 작품 카드
-    .SeniorCard2 {
+    .links {
         width: 100%; height: auto;
+        margin-top: 1em; margin-bottom: 1em;
+
+        button {
+            width: 100%; height: auto;
+
+            @media (min-width:$breakpoint-sm) {
+                font-size: $text-size-sm;
+            }
+
+            @media (min-width:$breakpoint-md) {
+                font-size: $text-size-md;
+            }
+
+            &:hover {
+                scale: 1.05;
+                color: $color-accent;
+            }
+        }
+        
+
+        &._2025 {
+            @media (min-width:$breakpoint-md) {
+                width: 100%; height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
     }
 }
 

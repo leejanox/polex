@@ -1,0 +1,24 @@
+@use '@styles/index' as *;
+
+.Temi {
+    width: 100%; min-height: 100vh;
+    overflow-y: auto;
+    @include flex-center;
+    flex-direction: column;
+
+    header, footer {
+        width: 100%; height: auto;
+    }
+
+    header {
+        z-index: $z-index-header;
+
+        @media (min-width: $breakpoint-sm) {
+            padding: 0 $padding-sm;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            padding: 0 $padding-md * 2;
+        }
+    }
+}
