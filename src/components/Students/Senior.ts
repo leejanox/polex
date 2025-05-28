@@ -62,8 +62,10 @@ export const SeniorData2024: SeniorCardProps[] = [
             skill: ["Python" , "JavaScript" , "TensorFlow" , "React"],
             date: "August 2024 - December 2024",
             remaining: "146 days more",
-            introduction: "Refik Anadol debuts 'In Situ: Refik Anadol' at the Guggenheim Museum Bilbao...",
-            description: 'Refik Anadol debuts "In Situ: Refik Anadol" at the Guggenheim Museum Bilbao...',
+            introduction: "예측모델 체험을 포함한 웹사이트",
+            description: '
+                
+            ',
             imageUrl: ["/assets/posters/1.jpg"],
             videoUrl: "https://youtu.be/Y4-JAoH4f08"
         }
