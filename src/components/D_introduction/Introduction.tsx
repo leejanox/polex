@@ -2,10 +2,9 @@ import styles from '@styles/D_introduction.module.scss';
 import { type TextData } from './index';
 interface IntroductionProps {
     data: TextData
-    setActive: (active: number) => void
 }
 
-export const Introduction = ({data, setActive}: IntroductionProps) => {
+export const Introduction = ({data}: IntroductionProps) => {
 
     return (
         <div className={styles.introduction} id={data.id.toString()}>

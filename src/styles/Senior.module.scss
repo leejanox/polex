@@ -24,8 +24,8 @@
         &._2025 {
             @media (min-width:$breakpoint-md) {
                 padding: $padding-md $padding-xl * 4;
-                flex-direction: row; 
-                flex-wrap: nowrap;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));                gap: 2rem;
             }
         }
     }
@@ -40,6 +40,7 @@
 
     .filter {
         width: 100%; height: auto;
+        border-bottom: 1px solid #333;
     }
     
     @media (min-width:$breakpoint-sm) {
@@ -58,6 +59,7 @@
         .filter {
             @include flex-center; flex-direction: row;
             gap: 1.5rem;
+            padding-bottom: $padding-md;
         }
 
         .content {
@@ -79,7 +81,7 @@
         }
 
         .filter {
-            padding: 0 $padding-xl * 6;
+            padding: 0 $padding-xl * 6 $padding-lg;
             display: flex; flex-direction: row;
             align-items: center; justify-content: flex-start;
             gap: 2rem;
@@ -157,6 +159,15 @@
             .skillContainer {
                 display: flex;
                 flex-direction: row;
+
+                @media (min-width:$breakpoint-sm) {
+                    gap: .5em;
+                }
+
+                @media (min-width:$breakpoint-md) {
+                    gap: 1em;
+                }
+                
     
                 .skill {
                     width: fit-content;
@@ -166,14 +177,6 @@
                     font-size: $text-size-sm;
                 }    
 
-                @media (min-width:$breakpoint-sm) {
-                    gap: .5em;
-                }
-
-                @media (min-width:$breakpoint-md) {
-                    gap: 1em;
-                }
-
                 &._2025 {
 
                     @media (min-width:$breakpoint-sm) {
@@ -181,8 +184,8 @@
                     }
 
                     @media (min-width:$breakpoint-md) {
-                        flex-direction: column;
                         gap: .5em;
+                        text-wrap: nowrap;
                     }
                 }
             }

@@ -31,7 +31,7 @@ export const ProfileCard = ({data}: {data: ProfileCardProps}) => {
                         </li>
                     ))}
                 </div>
-                <div className={styles.item}>
+                {/* <div className={styles.item}>
                     <h4>주요 실적</h4>
                     {data.Keyachievements.thesis?.map((v,i)=>(
                         <li key={i}>
@@ -39,7 +39,7 @@ export const ProfileCard = ({data}: {data: ProfileCardProps}) => {
                             <br />
                         </li>
                     ))}
-                </div>
+                </div> */}
             </div>
         </div>
     )

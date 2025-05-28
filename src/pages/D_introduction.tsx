@@ -119,13 +119,7 @@ export const D_introduction = () => {
                         ))}
                     </div>
                     <div id={text.find(v=>v.id === active)?.id.toString()} className={styles.introductionContainer}>
-                        {active !== 0 ? text.map((v,i)=>(
-                            <Introduction key={i} data={v} setActive={setActive}/>
-                        )) : 
-                        <div className={styles.introductionContainer}>
-                            <Introduction data={text[0]} setActive={setActive}/>
-                        </div>
-                        }
+                        <Introduction data={text[active]}/>
                     </div>
                     <div className={styles.linkContainer}>
                         <U_Button>

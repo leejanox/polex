@@ -8,7 +8,7 @@ import { useState } from 'react'
 export const MainHeader = () => {
 
     const [ open , setOpen ] = useState<boolean>(false);
-    const menu = ['전시소개' , '학과소개' , '1학년' , '2학년', '하이테크' , '방명록']
+    const menu = ['전시소개' , '학과소개' , '1학년' , '2학년', '하이테크']
 
     return (
         <div className={clsx(styles.MainHeader)}>

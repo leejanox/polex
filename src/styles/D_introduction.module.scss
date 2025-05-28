@@ -237,6 +237,40 @@
 
     //section3
 
+    .labelContainer {
+        width: 100%; height: auto;
+        @include flex-center; flex-direction: row;
+        color: $color-text-gray;
+        cursor: pointer; 
+        
+        @media (min-width: $breakpoint-sm) {
+            padding: $padding-lg 0;
+            gap: $padding-sm;
+            font-size: $text-size-sm;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            padding: $padding-xl 0;
+            gap: $padding-lg;
+            font-size: $text-size-md;
+        }
+        
+        &.active {
+            color: $color-white;
+        }
+
+        span {
+            &:hover {
+                color: $color-white;
+                scale: 1.05;
+            }
+        }
+    }
+
+    .introductionContainer {
+        width: 100%; height: auto;
+    }
+
     .linkContainer {
         width: 100%; height: auto;
         @include flex-center; flex-direction: row;

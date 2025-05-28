@@ -21,4 +21,217 @@
             padding: 0 $padding-md * 2;
         }
     }
+
+    .container {
+        flex: 1;
+        width: 100%; height: auto;
+
+        @media (min-width: $breakpoint-sm) {
+            display: flex; flex-direction: column-reverse;
+            padding: $padding-sm $padding-md;
+            gap: $padding-md;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            display: flex; flex-direction: row;
+            padding: $padding-xl * 2 $padding-xl * 4;
+            gap: $padding-xl * 2;
+        }
+
+        .left {
+            flex: 8;
+
+            .title {
+                text-align: center;
+
+                p {
+                    color: $color-text-gray;
+                }
+
+                @media (min-width: $breakpoint-sm) {
+                    margin-bottom: $padding-md;
+
+                    h2 {
+                        font-size: $title-size-md;
+                    }
+
+                    p {
+                        font-size: $text-size-sm;
+                    }
+                }
+
+                @media (min-width: $breakpoint-md) {
+                    @include flex-center; gap: $padding-md;
+                    border-bottom: 1px solid $color-text-gray;
+                    padding-bottom: $padding-md;
+                    margin-bottom: $padding-md;
+
+                    h2 {
+                        font-size: $title-size-lg;
+                    }
+
+                    p {
+                        font-size: $text-size-md;
+                    }
+                }
+            }
+
+            .introduction {
+                border-bottom: 1px solid $color-text-gray;
+
+                @media (min-width: $breakpoint-sm) {
+                    padding: 0 $padding-md;
+                }
+
+                @media (min-width: $breakpoint-md) {
+                    padding: $padding-xl * 2 $padding-xl;
+
+                    display: flex; flex-direction: column;
+                    gap: $padding-md;
+                    margin-bottom: $padding-lg;
+                }
+            }
+            
+
+            .buttons {
+                @include flex-center;
+
+                button {
+                    &:hover {
+                        scale: 1.05;
+                    }
+                }
+
+                @media (min-width: $breakpoint-sm) {
+                    display: flex; flex-direction: row;
+                    gap: $padding-xl * 2;
+                }
+
+                @media (min-width: $breakpoint-md) {
+                    display: flex; flex-direction: row;
+                    gap: $padding-xl * 4;
+                }
+            }
+        }
+
+        .right {
+            flex: 4;
+
+            @media (min-width: $breakpoint-sm) {
+                display: flex; flex-direction: column;
+                gap: $padding-md;
+            }
+
+            @media (min-width: $breakpoint-md) {
+                display: flex; flex-direction: column-;
+                gap: $padding-xl;
+            }
+
+            .info {
+                display: flex; flex-direction: column;
+                border-top: 1px solid $color-text-gray;
+                border-bottom: 1px solid $color-text-gray;
+                gap: $padding-md;
+
+                .name {
+                    display: flex; flex-direction: row;
+                    gap: $padding-sm;
+                }
+
+                @media (min-width: $breakpoint-sm) {
+
+                    padding: $padding-md 0;
+
+                    h3 {
+                        font-size: $text-size-xl;
+                    }
+
+                    h4 {
+                        font-size: $text-size-lg;
+                        font-weight: 300;
+                    }
+
+                    span {
+                        margin-top: 0.2em;
+                        font-size: $text-size-sm;
+                        font-weight: 300;
+                        color: $color-text-gray;
+                    }
+
+                    p {
+                        font-size: $text-size-sm;
+                    }
+                }
+
+                @media (min-width: $breakpoint-md) {
+
+                    padding: $padding-xl 0;
+
+                    h3 {
+                        font-size: $title-size-sm;
+                    }
+
+                    h4 {
+                        font-size: $text-size-xl;
+                    }
+
+                    span {
+                        font-size: $text-size-lg;
+                    }
+
+                    p {
+                        font-size: $text-size-md;
+                        line-height: 1.5;font-weight: 300;
+                    }
+                }
+            }
+            .tags {
+                margin-top: $padding-md;
+                display: flex; flex-direction: row;
+                gap: $padding-md; 
+
+                li {
+                    padding: $padding-xs $padding-md;
+                    border-radius: $radius-sm;
+                    color: $color-primary;
+                    border: 1px solid $color-primary;
+                    font-weight: 300;
+                    font-size: $text-size-xs;
+                }
+            }
+            .links {
+                border-bottom: 1px solid $color-text-gray;
+
+                svg {
+                    color: $color-primary;
+                }
+
+                p {
+                    font-size: $text-size-sm;
+
+                    &:hover {
+                        color: $color-primary;
+                        text-decoration: underline;
+                    }
+                }
+
+                a {
+                    @include flex-center; flex-direction: row;
+                    gap: $padding-md;
+                }
+
+                @media (min-width: $breakpoint-sm) {
+                    display: flex; flex-direction: row;
+                    gap: $padding-lg;
+                    padding: $padding-md 0;
+                }
+
+                @media (min-width: $breakpoint-md) {
+                    display: flex; flex-direction: row;
+                    gap: $padding-xl;
+                    padding: $padding-xl 0;
+                }
+            }
+        }
+    }
 }

@@ -62,11 +62,18 @@ export const SeniorData2024: SeniorCardProps[] = [
             skill: ["Python" , "JavaScript" , "TensorFlow" , "React"],
             date: "August 2024 - December 2024",
             remaining: "146 days more",
-            introduction: "예측모델 체험을 포함한 웹사이트",
-            description: '
+            introduction: `전령 사용량 예측모델 체험을 포함한 발표용 웹사이트입니다.
+            
+                발표용 슬라이드로 프로젝트를 소개하고 전력 사용량 예측모델을 체험해볼 수 있으며 다운로드 기능 및 로그인시 프로젝트 파일을 다운로드 할 수 있는 서비스를 제공합니다.
+            `,
+            description: `
+                ppt 처럼 페이지를 넘기며 프로젝트를 소개하고
                 
-            ',
-            imageUrl: ["/assets/posters/1.jpg"],
+                전력 사용량을 예측 할 수 있는 머신러닝 모델을 체험해보고
+
+                다운로드 기능 및 유저 피드백 기능을 포함한 웹사이트
+            `,
+            imageUrl: ["/assets/photos/average.png"],
             videoUrl: "https://youtu.be/Y4-JAoH4f08"
         }
     }
@@ -97,9 +104,9 @@ export const SeniorData2025: SeniorCardProps2[] = [
             date: "March, 2025 - June, 2025",
             remaining: "146 days more",
             imageUrl: [
-                "/assets/temi/Loading.gif",
-                "/assets/temi/Response.gif",
-                "/assets/temi/Wait.gif"
+                "/assets/temi/Temi_Wait.gif",
+                "/assets/temi/Temi_Loading.gif",
+                "/assets/temi/Temi_Response.gif",
             ],
             introduction: `"Tory, Talk + Story"
 
@@ -118,9 +125,9 @@ export const SeniorData2025: SeniorCardProps2[] = [
             date: "March, 2025 - June, 2025",
             remaining: "146 days more",
             imageUrl: [
-                "/assets/temi/Loading.gif",
-                "/assets/temi/Response.gif",
-                "/assets/temi/Wait.gif"
+                "/assets/temi/Temi_Loading.gif",
+                "/assets/temi/Temi_Response.gif",
+                "/assets/temi/Temi_Wait.gif"
             ],
             introduction: `
                 구식 예비군 훈련장 처럼 노후되거나 거리가 먼 곳이 아닌 가까운 사무실식 훈련장에서 예비군 훈련이 가능할 수 있도록 
@@ -139,9 +146,9 @@ export const SeniorData2025: SeniorCardProps2[] = [
             date: "April, 2025 - May, 2025",
             remaining: "146 days more",
             imageUrl: [
-                "/assets/temi/Loading.gif",
-                "/assets/temi/Response.gif",
-                "/assets/temi/Wait.gif"
+                "/assets/temi/Temi_Loading.gif",
+                "/assets/temi/Temi_Response.gif",
+                "/assets/temi/Temi_Wait.gif"
             ],
             introduction: `
                 구식 예비군 훈련장 처럼 노후되거나 거리가 먼 곳이 아닌 가까운 사무실식 훈련장에서 예비군 훈련이 가능할 수 있도록 
@@ -160,9 +167,9 @@ export const SeniorData2025: SeniorCardProps2[] = [
             date: "March, 2025 - June, 2025",
             remaining: "146 days more",
             imageUrl: [
-                "/assets/temi/Loading.gif",
-                "/assets/temi/Response.gif",
-                "/assets/temi/Wait.gif"
+                "/assets/temi/Temi_Loading.gif",
+                "/assets/temi/Temi_Response.gif",
+                "/assets/temi/Temi_Wait.gif"
             ],
             introduction: `
                 태양열에 따라다니며 에너지를 측정하는 추적기
