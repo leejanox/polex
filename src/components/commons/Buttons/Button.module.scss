@@ -15,7 +15,11 @@
 }
 
 .button2 {
-    width: 10rem; height: 3rem;
+    width: auto; height: auto;
+    display: flex; flex-direction: row;
+    align-items: center; justify-content: center;
+    gap: .5rem;
+    padding: .5rem 1rem;
     border-bottom: 1px solid $color-white;
     //border-radius: $radius-sm;
     background-color: transparent; color: inherit;

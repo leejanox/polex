@@ -3,7 +3,6 @@ import { D_introduction } from '@pages/D_introduction'
 import { E_introduction } from '@pages/E_introduction'
 import { HighTech } from '@pages/HighTech'
 import { Junior } from '@pages/Junior'
-import { Review } from '@pages/Review'
 import { Senior } from '@pages/Senior'
 import { Routes, Route } from 'react-router-dom'
 import { Temi } from '@components/Students/Temi'
@@ -29,9 +28,6 @@ export const Router = () => {
 
             <Route path='/학과소개' element={<D_introduction/>} />
             <Route path='/majorDescription' element={<D_introduction/>} />
-
-            <Route path='/방명록' element={<Review/>} />
-            <Route path='/review' element={<Review/>} />
 
             <Route path='/전시소개' element={<E_introduction/>} />
             <Route path='/exhibitionDescription' element={<E_introduction/>} />

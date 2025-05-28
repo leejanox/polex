@@ -44,11 +44,11 @@ export const HeroSection = () => {
                             <p>{`오시는길 \u27AF`}</p>
                         </U_Button>
                     </a>
-                    <Link to={'/review'}>
+                    <a href={'#section3'}>
                         <U_Button>
                             <p>{`방명록 남기기 \u27AF`}</p>
                         </U_Button>
-                    </Link>
+                    </a>
             </div>
             <div className={clsx(styles.descriptionContainer)}>
                 <div className={clsx(styles.introduction,styles.left)}>

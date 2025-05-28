@@ -1,6 +1,6 @@
 export { ProfileCard } from './ProfileCard';
-export { TextCard } from './TextCard';
 export { Photo } from './Photo';
+export { Introduction } from './Introduction';
 
 export const photos = [
     '/assets/photos/school1.png',
@@ -13,7 +13,6 @@ export const photos = [
     '/assets/photos/school8.jpg',
     '/assets/photos/school9.jpg',
     '/assets/photos/school10.jpg',
-    
 ]
 
 export interface TextData {
@@ -29,8 +28,7 @@ export const Text: TextData[] = [
         id: 1,
         title: '메인 슬로건',
         slogan: 'ACADEMIC INSIGHT',
-        description: `
-            AI 필수 시대! 
+        description: `AI 필수 시대! 
             쉽고 재미있게 AI & SW 개발을 배우고 
             취업의 꿈을 이루세요
         `,
@@ -40,16 +38,14 @@ export const Text: TextData[] = [
         id: 2,
         title: '학과 소개',
         slogan: 'About Department',
-        description: `
-            인공지능 SW 융합과
+        description: `인공지능 SW 융합과
             2023년 신설 학과 – 한국폴리텍대학 춘천캠퍼스
 
             "앞으로 한국이 집중해야 할 것은
             첫째도 AI, 둘째도 AI, 셋째도 AI"
             – 손정의 (소프트뱅크 회장)
         `,
-        example:`
-            학과 특징
+        example:`학과 특징
             - 인공지능 핵심기술 + 소프트웨어 실무 능력 배양
             - AI 언어처리, AI 코딩, 머신러닝 실습, 빅데이터 관리
             - 산업 연계 프로젝트 운영 (AI + X 융합 실습 가능)
@@ -59,8 +55,7 @@ export const Text: TextData[] = [
         id: 3,
         title: '차별점',
         slogan: 'What Makes Us Different',
-        description: `
-            한국폴리텍대학 춘천캠퍼스 평균 취업률 82.6%
+        description: `한국폴리텍대학 춘천캠퍼스 평균 취업률 82.6%
 
             - AI 기초부터 Chat-GPT까지 활용
             - 실전 SW 개발 기술로 취업 성공
@@ -73,52 +68,50 @@ export const Text: TextData[] = [
         id: 4,
         title: '재학생 인터뷰',
         slogan: 'Student Interview',
-        description: `
-            Q. 컴퓨터 기초를 몰라도 괜찮을까요?
+        description: `Q. 컴퓨터 기초를 몰라도 괜찮을까요?
             - “걱정했지만 교수님들의 친절한 설명 덕분에 쉽게 배울 수 있었어요.”
             – 송OO
 
             Q. 졸업 후 취업은 어떤가요?
             - “AI 기반 제조업, SI 기업, 소프트웨어 개발, 의료 데이터 분야 등으로 진출할 수 있어요.”
             – 최OO
-        `
+        `,
+        example: '컴퓨터 기초를 몰라도 괜찮아요'
     },
     {
         id: 5,
         title: '1학년 커리큘럼',
         slogan: 'Junior Curriculum',
-        description: `
-            - 프로그래밍언어실습, 머신러닝기초실습, 인공지능모델
+        description: `- 프로그래밍언어실습, 머신러닝기초실습, 인공지능모델
             - AI와미래사회, 블록코딩을 활용한 AI기초, IoT융합프로그래밍
             - 데이터베이스실무, 영상처리실습, 컴퓨터네트워크
             - 파이썬, 자료구조, 알고리즘 등 기본기부터 실무까지
-        `
+        `,
+        example: '튼튼한 기본기를 다질 수 있어요.'
     },
     {
         id: 6,
         title: '2학년 커리큘럼',
         slogan: 'Senior Curriculum',
-        description: `
-            - 융합프로젝트실습 1·2, 서버구축실습, 딥러닝모델구현
+        description: `- 융합프로젝트실습 1·2, 서버구축실습, 딥러닝모델구현
             - 빅데이터 수집 및 처리, AI엣지컴퓨팅실습, 웹프로그래밍
             - VR/AR콘텐츠제작, 메타버스콘텐츠실무
             - AI머신비전검사, 클라우드활용실습 등 실무 중심 교육
-        `
+        `,
+        example: '여러 프로젝트를 통해 실무 능력을 배양할 수 있어요.'
     },
     {
         id: 7,
         title: '진로',
         slogan: 'Career',
-        description: `
-            - 자율주행 시뮬레이션, 웹/앱 개발, 영상처리 프로젝트 등 실무 기반 작품 다수
+        description: `- 자율주행 시뮬레이션, 웹/앱 개발, 영상처리 프로젝트 등 실무 기반 작품 다수
             - 공모전 및 현장실습을 통해 실제 기업 협업 프로젝트 경험
 
             취업 데이터:
             - 2년제 학위과정 취업률: 82.9%
             - 취업 유지율: 89%
         `,
-        example: `
-            경제적 부담 완화: 연 등록금 250만 원, 장학금 144만 원, 기숙사비 월 10만 원
+        example: `경제적 부담 완화: 연 등록금 250만 원, 장학금 144만 원, 기숙사비 월 10만 원
             문의: 033-260-7644, 76458
         `
     }

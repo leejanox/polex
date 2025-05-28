@@ -127,6 +127,46 @@ export const SeniorData2025: SeniorCardProps2[] = [
             `,
             links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
         }
+    },
+    {
+        data: {
+            title: "악성 URL 검사 프로그램",
+            category: "AI",
+            team: "최기현",
+            skill: ["Python", "TensorFlow", "Keras"],
+            date: "April, 2025 - May, 2025",
+            remaining: "146 days more",
+            imageUrl: [
+                "/assets/temi/Loading.gif",
+                "/assets/temi/Response.gif",
+                "/assets/temi/Wait.gif"
+            ],
+            introduction: `
+                구식 예비군 훈련장 처럼 노후되거나 거리가 먼 곳이 아닌 가까운 사무실식 훈련장에서 예비군 훈련이 가능할 수 있도록 
+                
+                전시 상황을 가정하여 만든 실전형 진지 구축 및 적 침투 대응 훈련 VR시뮬레이션
+            `,
+            links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
+        }
+    },
+    {
+        data: {
+            title: "태양열 자동추적기",
+            category: "Arduino",
+            team: "유선일",
+            skill: ["Arduino"],
+            date: "March, 2025 - June, 2025",
+            remaining: "146 days more",
+            imageUrl: [
+                "/assets/temi/Loading.gif",
+                "/assets/temi/Response.gif",
+                "/assets/temi/Wait.gif"
+            ],
+            introduction: `
+                태양열에 따라다니며 에너지를 측정하는 추적기
+            `,
+            links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
+        }
     }
 ]
 
