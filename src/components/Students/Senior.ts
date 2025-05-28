@@ -65,7 +65,7 @@ export const SeniorData2024: SeniorCardProps[] = [
             introduction: "Refik Anadol debuts 'In Situ: Refik Anadol' at the Guggenheim Museum Bilbao...",
             description: 'Refik Anadol debuts "In Situ: Refik Anadol" at the Guggenheim Museum Bilbao...',
             imageUrl: ["/assets/posters/1.jpg"],
-            videoUrl: "https://www.youtube.com/watch?v=21zqyh8L48A"
+            videoUrl: "https://youtu.be/Y4-JAoH4f08"
         }
     }
 ]
