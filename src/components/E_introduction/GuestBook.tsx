@@ -2,6 +2,7 @@ import styles from '@styles/E_introduction.module.scss';
 import { Heart } from 'lucide-react';
 import { collection, Timestamp, getDocs, doc, addDoc, getDoc, updateDoc } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
+import clsx from 'clsx';
 import { db } from 'src/firebase';
 
 interface Message {
@@ -14,6 +15,7 @@ interface Message {
 
 export const GuestBook = () => {
 
+    const [active, setActive] = useState<boolean>(false);
     const [message, setMessage] = useState<Message[]>([]);
     const [newMessage, setNewMessage] = useState<Message>({
         id: '',
@@ -34,8 +36,9 @@ export const GuestBook = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if(!newMessage) alert('모든 항목을 입력해주세요.');
-
+        if(!newMessage.name || !newMessage.message) alert('모든 항목을 입력해주세요.');
+        
+        setActive(true);
         await addDoc(collection(db, 'guestBook'), newMessage);
         setNewMessage({
             id: '',
@@ -45,6 +48,7 @@ export const GuestBook = () => {
             like: 0,
         });
         fetchMessage();
+        setActive(false);
     }
 
     const handleLike = async (id: string) => {
@@ -70,15 +74,21 @@ export const GuestBook = () => {
                 <p>방명록을 남겨주세요</p>
             </div>
             <table className={styles.list}>
-                <thead className={styles.list__header}>
+                <thead>
                     <tr>
                         <th>Name</th>
                         <th>Message</th>
                         <th>Date</th>
-                        <th><Heart size={16}/></th>
+                        <th><Heart/></th>
+                    </tr>
+                    <tr>
+                        <th>이름</th>
+                        <th>메시지</th>
+                        <th>날짜</th>
+                        <th>추천</th>
                     </tr>
                 </thead>
-                <tbody className={styles.list__body}>
+                <tbody>
                     {message.map((v,i)=>(
                         <tr key={i} id={v.id}>
                             <td>{v.name}</td>
@@ -92,19 +102,25 @@ export const GuestBook = () => {
                                 hour12: false,
                             })}
                             </td>
-                            <td><Heart size={16} onClick={()=>handleLike(v.id)}/><span>{v.like}</span></td>
+                            <td><Heart onClick={()=>handleLike(v.id)}/><span>{v.like}</span></td>
                         </tr>
                     ))}
                 </tbody>
             </table>
             <form className={styles.form} onSubmit={handleSubmit}>
-                <input id='name' type="name" placeholder="이름" 
-                    value={newMessage.name} onChange={(e)=>setNewMessage({...newMessage, name: e.target.value})}
-                />
-                <input id='message' type="text" placeholder="메시지" 
-                    value={newMessage.message} onChange={(e)=>setNewMessage({...newMessage, message: e.target.value})}
-                />
-                <button type="submit">작성</button>
+                <div className={styles.form_input}>
+                    <input id='name' type="name" placeholder="이름" 
+                        value={newMessage.name} onChange={(e)=>setNewMessage({...newMessage, name: e.target.value})}
+                    />
+                    <input id='message' placeholder="메시지" 
+                        value={newMessage.message} onChange={(e)=>setNewMessage({...newMessage, message: e.target.value})}
+                    />
+                </div>
+                <button type="submit"
+                    className={clsx({
+                        [styles.active]: active,
+                    })}
+                >작성</button>
             </form>
         </div>
     );

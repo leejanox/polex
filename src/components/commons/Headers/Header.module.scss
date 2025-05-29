@@ -47,7 +47,7 @@
     }
 
 
-    @media (min-width:$breakpoint-sm) {
+    @media (min-width:$breakpoint-sm), (min-width:$breakpoint-xs), (min-width:$breakpoint-base) {
 
         .modal {
             position: absolute;

@@ -37,9 +37,9 @@ export const Carousel = () => {
                     >
                     {JuniorInfo.map((item, index) => (
                         <div className={styles.slide} key={index}>
-                            <img src={item.src} alt={`slide-${index}`} draggable={false} />
+                            <img src={item.src[0]} alt={`slide-${index}`} draggable={false} />
                             <h3>{item.name}</h3>
-                            <p>{item.title}</p>
+                            <p>{item.title[0]}</p>
                         </div>
                     ))}
                     </div>

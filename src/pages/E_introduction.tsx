@@ -2,7 +2,7 @@ import { MainHeader } from '@components/commons/Headers';
 import { MainFooter } from '@components/commons/Footers';
 import { HeroSection,KakaoMap, GuestBook } from '@components/E_introduction';
 import styles from '@styles/E_introduction.module.scss';
-import { MapPin, Phone, TramFront, TrendingUp } from 'lucide-react';
+import { Copy, MapPin, Phone, TramFront, TrendingUp } from 'lucide-react';
 import { useCopy } from '@hooks/useCopy';
 import { useEffect } from 'react';
 //! 1. 전시소개 , 오시는길
@@ -37,7 +37,8 @@ export const E_introduction = () => {
                             </div>
                             <div className={styles.item}>
                                 <Phone/>
-                                <p onClick={copy}>02-541-8888</p>
+                                <p>02-541-8888</p>
+                                <Copy size={16} onClick={copy}/>
                             </div>      
                             <div className={styles.item}>
                                 <TramFront/>

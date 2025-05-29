@@ -112,9 +112,7 @@ export const D_introduction = () => {
                     <div className={styles.labelContainer}>
                         {text.map((v,i)=>(
                             <div key={i} className={clsx(styles.label, active === v.id && styles.active)}>
-                                <a href={`#${v.id}`} onClick={(e)=>{e.preventDefault(); document.getElementById(v.id.toString())?.scrollIntoView({behavior: 'smooth'})}}>
-                                    <span>{v.title}</span>
-                                </a>
+                                <span>{v.title}</span>
                             </div>
                         ))}
                     </div>

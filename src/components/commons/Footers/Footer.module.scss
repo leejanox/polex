@@ -11,13 +11,16 @@
 
     &.item {
         width: fit-content;
-        font-size: $text-size-xs;
-        font-weight: 300;
-        letter-spacing: .1rem;
         @include flex-center; 
         flex-direction: row;
-        gap: .4rem;
 
+        @media (min-width:$breakpoint-xs), (min-width:$breakpoint-base), (min-width:$breakpoint-sm) {
+            font-size: $text-size-xs;
+            font-weight: 300;
+            letter-spacing: .1rem;
+            gap: .4rem;
+        }
+        
         @media (min-width:$breakpoint-md) {    
             font-size: $text-size-sm;
             font-weight: 300;

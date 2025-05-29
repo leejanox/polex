@@ -1,14 +1,12 @@
-import { Button, U_Button } from '@components/commons/Buttons';
-import { EDdescriptionEnglish, EDdescriptionKorean, EDParticipationList, EDInfo } from './text';
+import { U_Button } from '@components/commons/Buttons';
+import { EDdescriptionKorean, EDParticipationList, EDInfo } from './text';
 import styles from '@styles/E_introduction.module.scss';
-import { useState } from 'react';
 import ReactPlayer from 'react-player';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
-
+import { ArrowRight } from 'lucide-react';
 export const HeroSection = () => {
 
-    const [isEnglish, setIsEnglish] = useState(false);
     return (
         <div className={styles.section1}>
             <div className={clsx(styles.title)}>
@@ -22,7 +20,7 @@ export const HeroSection = () => {
                         <span>LOCATION</span>
                     </div>
                     <div className={clsx(styles.item)}>
-                        <h1>2025.06.25 - 2025.06.27</h1>
+                        <h1>2025.06.25 - 06.27</h1>
                         <span>DATE</span>
                     </div>
                 </div>
@@ -54,19 +52,11 @@ export const HeroSection = () => {
                 <div className={clsx(styles.introduction,styles.left)}>
                     <h1>전시 소개</h1>
                     <div className={clsx(styles.description)}>
-                        {isEnglish ? (
-                            <div className={clsx(styles.description,styles.english)}>
-                                {EDdescriptionEnglish.split('\n').map((line, index) => (
-                                    <p key={index}>{line}</p>
-                                ))}
-                            </div>
-                        ) : (
-                            <div className={clsx(styles.description,styles.korean)}>
-                                {EDdescriptionKorean.split('\n').map((line, index) => (
-                                    <p key={index}>{line}</p>
-                                ))}
-                            </div>
-                        )}
+                        <div className={clsx(styles.description,styles.korean)}>
+                            {EDdescriptionKorean.split('\n').map((line, index) => (
+                                <p key={index}>{line}</p>
+                            ))}
+                        </div>
                     </div>
                 </div>
                 <div className={clsx(styles.participation,styles.right)}>
@@ -89,6 +79,25 @@ export const HeroSection = () => {
                         ))}
                     </div>
                 </div>
+            </div>
+            <div className={clsx(styles.buttonGroup)}>
+                <h1>작품 보러가기</h1>
+                <ArrowRight/>
+                <Link to={'/junior'}>
+                    <U_Button>
+                        <p>1학년 작품</p>
+                    </U_Button>
+                </Link>
+                <Link to={'/senior'}>
+                    <U_Button>
+                        <p>2학년 작품</p>
+                    </U_Button>
+                </Link>
+                <Link to={'/highTech'}>
+                    <U_Button>
+                        <p>하이테크 작품</p>
+                    </U_Button>
+                </Link>
             </div>
         </div>
     )

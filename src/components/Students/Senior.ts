@@ -160,6 +160,25 @@ export const SeniorData2025: SeniorCardProps2[] = [
     },
     {
         data: {
+            title: "손 영상인식 드로잉",
+            category: "Motion Capture",
+            team: "강규상",
+            skill: ["Python", "TensorFlow"],
+            date: "April, 2025 - May, 2025",
+            remaining: "146 days more",
+            imageUrl: [
+                "/assets/temi/Temi_Loading.gif",
+                "/assets/temi/Temi_Response.gif",
+                "/assets/temi/Temi_Wait.gif"
+            ],
+            introduction: `
+                태양열에 따라다니며 에너지를 측정하는 추적기
+            `,
+            links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
+        }
+    },
+    {
+        data: {
             title: "태양열 자동추적기",
             category: "Arduino",
             team: "유선일",
