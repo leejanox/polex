@@ -18,10 +18,12 @@ $text-size-sm: 12px;
 $text-size-md: 14px;
 $text-size-lg: 16px;
 $text-size-xl: 18px;
-$title-size-sm: 20px;
-$title-size-md: 24px;
-$title-size-lg: 28px;
-$title-size-xl: 32px;
+$title-size-2xs: 10px;
+$title-size-xs: 12px;
+$title-size-sm: 16px;
+$title-size-md: 18px;
+$title-size-lg: 20px;
+$title-size-xl: 24px;
 
 //폰트 두께
 $text-weight-sm: 300;
@@ -37,6 +39,7 @@ $z-index-dropdown: 500;
 $z-index-overlay: 600;
 
 //패딩
+$padding-2xs: 2px;
 $padding-xs: 4px;
 $padding-sm: 8px;
 $padding-md: 12px;
@@ -63,6 +66,13 @@ $breakpoint-sm: 390px;
 $breakpoint-base: 480px;
 $breakpoint-md: 640px;
 
+$breakpoint-min-xs: 340px; $breakpoint-max-xs: 360px;
+$breakpoint-min-sm: 360px; $breakpoint-max-sm: 390px;
+$breakpoint-min-base: 390px; $breakpoint-max-base: 430px;
+$breakpoint-min-md: 430px; $breakpoint-max-md: 480px;
+$breakpoint-min-lg: 480px; $breakpoint-max-lg: 640px;
+$breakpoint-min-xl: 640px; $breakpoint-max-xl: 2040px;
+
 
 
 //투명도
@@ -70,3 +80,10 @@ $opacity-0: 0;
 $opacity-50: .5;
 $opacity-75: .75;
 $opacity-100: 1;
+
+//svg 사이즈
+$svg-size-xs: .4rem;
+$svg-size-sm: .6rem;
+$svg-size-md: .8rem;
+$svg-size-lg: 1rem;
+$svg-size-xl: 1.2rem;
