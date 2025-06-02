@@ -1,9 +1,10 @@
 import { EDdescriptionKorean, EDParticipationList, EDInfo } from './text';
-import styles from '@styles/E_intro.module.scss';
+import styles from '@styles/E_introduction.module.scss';
 import ReactPlayer from 'react-player';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { U_Button } from '@components/commons/Buttons';
 export const HeroSection = () => {
 
     return (
@@ -32,19 +33,19 @@ export const HeroSection = () => {
             </div>
             <div className={clsx(styles.buttonGroup1)}>
                 <Link to={'/학과소개'}>
-                    <button>
+                    <U_Button>
                         <p>{`학과 소개 \u27AF`}</p>
-                    </button>
+                    </U_Button>
                 </Link>
                 <a href={'#section2'}>
-                    <button>
+                    <U_Button>
                         <p>{`오시는길 \u27AF`}</p>
-                    </button>
+                    </U_Button>
                 </a>
                 <a href={'#section3'}>
-                    <button>
+                    <U_Button>
                         <p>{`방명록 남기기 \u27AF`}</p>
-                    </button>
+                    </U_Button>
                 </a>
         </div>
         <div className={clsx(styles.descriptionContainer)}>
@@ -81,22 +82,21 @@ export const HeroSection = () => {
         </div>
         <div className={clsx(styles.buttonGroup2)}>
             <h1>작품 보러가기</h1>
-            <ArrowRight/>
             <Link to={'/junior'}>
-                <button>
+                <U_Button>
                     <p>1학년</p>
-                </button>
+                </U_Button>
             </Link>
             <Link to={'/senior'}>
-                <button>
+                <U_Button>
                     <p>2학년</p>
-                </button>
+                </U_Button>
             </Link>
             <Link to={'/highTech'}>
-                <button>
+                <U_Button>
                     <p>하이테크</p>
-                </button>
-                </Link>
+                </U_Button>
+            </Link>
             </div>
         </div>
     )

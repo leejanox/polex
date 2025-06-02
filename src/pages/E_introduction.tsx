@@ -1,7 +1,7 @@
 import { MainHeader } from '@components/commons/Headers';
 import { MainFooter } from '@components/commons/Footers';
 import { HeroSection,KakaoMap, GuestBook } from '@components/E_introduction';
-import styles from '@styles/E_intro.module.scss';
+import styles from '@styles/E_introduction.module.scss';
 import { Copy, MapPin, Phone, TramFront, TrendingUp } from 'lucide-react';
 import { useCopy } from '@hooks/useCopy';
 import { useEffect } from 'react';
