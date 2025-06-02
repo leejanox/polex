@@ -100,19 +100,19 @@
         border-bottom: 1px solid #333;
         flex-wrap: wrap;
 
-        @media (min-width:$breakpoint-sm) {
-            padding: $padding-sm $padding-xl * 2 $padding-xl;
+        @media (min-width:$breakpoint-sm) and (max-width:$breakpoint-md) {
+            //padding: $padding-sm $padding-xl * 2 $padding-xl;
             gap: .5em;
 
             .image {
-                width: 400px;
+                width: 100%;
             }
         }
 
         @media (min-width:$breakpoint-md) {
             padding: $padding-md $padding-xl * 4 $padding-xl * 2;
             gap: 3em;
-
+            min-height: 420px;
             .image {
                 width: 300px;
             }
@@ -139,13 +139,14 @@
 
     .info {
         flex: 1;
-        max-width: 300px;
+        min-width: 250px;
         
-        @media (min-width:$breakpoint-sm) {
+        @media (min-width:$breakpoint-sm) and (max-width:$breakpoint-md) {
             padding: $padding-md $padding-sm;
             font-size: $text-size-sm;
             
             .category {
+                width: fit-content;
                 font-size: $text-size-xs;
                 color: #888;
             }

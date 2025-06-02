@@ -5,8 +5,8 @@ import { HighTech } from '@pages/HighTech'
 import { Junior } from '@pages/Junior'
 import { Senior } from '@pages/Senior'
 import { Routes, Route } from 'react-router-dom'
-import { Temi } from '@components/Students/Temi'
-
+import { SeniorDetail } from '@pages/SeniorDetail'
+import { DetailCard_list } from '@components/Students'
 export const Router = () => {
 
 
@@ -17,8 +17,12 @@ export const Router = () => {
         <Routes>
             <Route path='/senior' element={<Senior/>} />
             <Route path='/2학년' element={<Senior/>} />
-            <Route path='/senior/토리' element={<Temi/>} />
-            <Route path='/senior/VR' element={<Temi/>} />
+            {DetailCard_list.map((v)=>(
+                <Route path={`/senior/${v.data.title}`} element={<SeniorDetail title={v.data.title}/>} />
+            ))}
+            {DetailCard_list.map((v)=>(
+                <Route path={`/senior/${v.data.id}`} element={<SeniorDetail title={v.data.title}/>} />
+            ))}
 
             <Route path='/highTech' element={<HighTech/>} />
             <Route path='/하이테크' element={<HighTech/>} />

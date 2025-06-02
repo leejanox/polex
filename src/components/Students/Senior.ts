@@ -139,10 +139,10 @@ export const SeniorData2025: SeniorCardProps2[] = [
     },
     {
         data: {
-            title: "악성 URL 검사 프로그램",
-            category: "AI",
+            title: "안심링크",
+            category: "인터넷 안전 브라우징 서비스",
             team: "최기현",
-            skill: ["Python", "TensorFlow", "Keras"],
+            skill: ["Python", "websocket"],
             date: "April, 2025 - May, 2025",
             remaining: "146 days more",
             imageUrl: [
@@ -151,11 +151,11 @@ export const SeniorData2025: SeniorCardProps2[] = [
                 "/assets/temi/Temi_Wait.gif"
             ],
             introduction: `
-                구식 예비군 훈련장 처럼 노후되거나 거리가 먼 곳이 아닌 가까운 사무실식 훈련장에서 예비군 훈련이 가능할 수 있도록 
-                
-                전시 상황을 가정하여 만든 실전형 진지 구축 및 적 침투 대응 훈련 VR시뮬레이션
+                '안심링크' 는 컴퓨터에 익숙하지 않은 디지털 소외계층의 인터넷 거래 시 발생하는 사기를 미연에 방지할 수 있는 서비스를 제공합니다.
+
+                누구나 간편하게 사용할 수 있도록 설계한 UI를 제공하며 불필요한 작업은 피하고 메시지만 있으면 바로 악성 사이트 탐지가 가능합니다.
             `,
-            links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
+            links: ["https://github.com/gihyeonchoi"],
         }
     },
     {
@@ -172,7 +172,9 @@ export const SeniorData2025: SeniorCardProps2[] = [
                 "/assets/temi/Temi_Wait.gif"
             ],
             introduction: `
-                태양열에 따라다니며 에너지를 측정하는 추적기
+                안심링크 (AnsimLink)는 인터넷 상에서 이루어지는 개인과 개인간의 거래에서 발생할 수 있는 
+                
+                피싱 사이트를 미리 탐지해 사기를 예방할 수 있는 서비스입니다.
             `,
             links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
         }
@@ -200,8 +202,9 @@ export const SeniorData2025: SeniorCardProps2[] = [
 
 //테미
 
-export interface TemiDataProps {
+export interface DetailCardProps {
     data: {
+        id: string;
         people: {
             name: string;
             role: string;
@@ -214,11 +217,15 @@ export interface TemiDataProps {
         skill: string[];
         date: string;
         introduction: string;
-    }
+    },   
 }
-export const TemiData: TemiDataProps[] = [
+
+export type DetailCard_list = DetailCardProps[]
+
+export const DetailCard_list: DetailCard_list = [
     {
         data: {
+            id: "1",
             title: "토리",
             subtitle: "Tory, Talk + Story",
             category: "Conversational AI ChatBot",
@@ -260,7 +267,45 @@ export const TemiData: TemiDataProps[] = [
                 응답은 TTS(Text to Speech) 기술을 통해 음성으로 변환되어 Temi의 스피커로 전달되며, 동시에 사전에 정의된 표정 애니메이션이 함께 출력되어 시각적인 반응을 보입니다. Tory는 대화의 맥락에 따라 다양한 애니메이션을 조합해 보다 자연스럽고 생동감 있는 상호작용을 제공합니다.
 
                 이 챗봇 시스템은 ‘미래 도시’를 주제로 한 전시 환경에서, 인공지능 기술이 사람과 어떤 방식으로 상호작용할 수 있는지를 관람객이 직접 경험할 수 있도록 설계되었습니다.
-            `
+            `,
+        }
+    },
+    {
+        data: {
+            id: "2",
+            title: "안심링크",
+            subtitle: "AnsimLink",
+            category: "인터넷 안전 브라우징 서비스",
+            team: "최기현",
+            skill: ["Python", "websocket"],
+            date: "2025년 4월 - 2025년 5월",
+            people: [
+                {
+                    name: `최기현 [팀장] `,
+                    role: `시스템 구조 설계
+
+
+                        내부 알고리즘 설계 및 제작
+
+
+                    외부 위협 데이터 수집 및 분석 로직 구축
+
+
+                        웹 화면 표시 등 전반적 디자인 제작
+                    `,
+                    link: "https://github.com/gihyeonchoi",
+                }
+            ],
+            introduction: `안심링크 (AnsimLink)는 인터넷 상에서 이루어지는 개인과 개인간의 거래에서 발생할 수 있는 피싱 사이트를 미리 탐지해 사기를 예방할 수 있는 서비스입니다.
+                컴퓨터와 모바일과 같은 디지털 기기에 익숙하지 않은 인터넷 취약 계층도 쉽게 사용할 수 있고 판별할 수 있는 시스템을 목표로 개발되었습니다.
+
+                인터넷 상에서의 거래 중 판매자가 연결해주는 이미 등록된 에스크로 사이트가 아닌 피싱 사이트일 가능성이 있습니다. 이러한 사이트들은 구매자를 속여 개인정보를 탈취하거나, 결제 정보를 가로채는 등의 악의적인 목적을 가지고 있을 가능성이 높습니다.
+                외형상 안전하게 처리할 수 있도록 돕는 서비스처럼 보이지만, 실제로는 사용자에게 피해를 입힐 위험이 큽니다.
+
+                본 프로젝트는 주요 거래 사이트의 정보들을 취합하여 인증된 사이트들만을 저장하고, 사용자가 메시지나 사이트 URL을 입력시 서버에 저장된 데이터들을 조회하고 사이트를 분석하여 악성 사이트인지 아닌지 판별합니다.
+
+                이를 통해 사용자는 인터넷 거래 시 악성 사이트를 빠르고 정확하게 식별할 수 있으며, 거래의 안전성을 높이며 사이버 범죄의 피해를 줄일 수 있을것으로 예상됩니다.
+            `,
         }
     }
 ]

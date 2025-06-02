@@ -1,3 +1,4 @@
+
 //색
 $color-white: #f9fafb;
 $color-black: #111827;
@@ -23,6 +24,17 @@ $title-size-xs: 12px;
 $title-size-sm: 16px;
 $title-size-md: 18px;
 $title-size-lg: 20px;
+
+
+$text-size-2xs: 6px;
+$text-size-xs: 8px;
+$text-size-sm: 10px;
+$text-size-md: 12px;
+$text-size-lg: 14px;
+$text-size-xl: 16px;
+$title-size-sm: 18px;
+$title-size-md: 20px;
+$title-size-lg: 22px;
 $title-size-xl: 24px;
 
 //폰트 두께
@@ -61,9 +73,9 @@ $radius-lg: 16px;
 $radius-xl: 20px;
 
 //브레이크 포인트 
-$breakpoint-xs: 340px;
-$breakpoint-sm: 390px;
-$breakpoint-base: 480px;
+$breakpoint-xs: 300px;
+$breakpoint-sm: 320px;
+$breakpoint-base: 400px;
 $breakpoint-md: 640px;
 
 $breakpoint-min-xs: 340px; $breakpoint-max-xs: 360px;
