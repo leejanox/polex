@@ -34,6 +34,7 @@ export const D_introduction = () => {
     });
     const modalRef = useRef<HTMLDivElement>(null);
 
+    
     const handleChange = (e: React.ChangeEvent<HTMLInputElement|HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setForm(prev => ({...prev, [name]: value}));
@@ -111,13 +112,15 @@ export const D_introduction = () => {
                     <h1>학과소개</h1>
                     <div className={styles.labelContainer}>
                         {text.map((v,i)=>(
-                            <div key={i} className={clsx(styles.label, active === v.id && styles.active)}>
+                            <div key={i} 
+                                onClick={()=>setActive(v.id - 1)}
+                                className={clsx(styles.label, active === v.id - 1 ? styles.active : '')}>
                                 <span>{v.title}</span>
                             </div>
-                        ))}
+                        ))} 
                     </div>
                     <div id={text.find(v=>v.id === active)?.id.toString()} className={styles.introductionContainer}>
-                        <Introduction data={text[active]}/>
+                        <Introduction data={text[active]} />
                     </div>
                     <div className={styles.linkContainer}>
                         <U_Button>

@@ -1,5 +1,5 @@
 export { ProfileCard } from './ProfileCard';
-export { Photo } from './Photo';
+export { Photo, Slide, Thumbnail } from './Photo';
 export { Introduction } from './Introduction';
 
 export const photos = [
@@ -112,7 +112,7 @@ export const Text: TextData[] = [
             - 취업 유지율: 89%
         `,
         example: `경제적 부담 완화: 연 등록금 250만 원, 장학금 144만 원, 기숙사비 월 10만 원
-            문의: 033-260-7644, 76458
+            문의: 033-260-7644, 7645
         `
     }
 ];

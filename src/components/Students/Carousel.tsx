@@ -7,6 +7,7 @@ import clsx from 'clsx';
 export const Carousel = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [changeImage, setChangeImage] = useState(false);
     const slideWidth = 100; // % 기준 한 슬라이드 너비
 
     const handlePrev = () => {
@@ -36,12 +37,29 @@ export const Carousel = () => {
                         style={{ transform: `translateX(-${currentIndex * slideWidth}%)`,}}
                     >
                     {JuniorInfo.map((item, index) => (
-                        <div className={styles.slide} key={index}>
-                            <img src={item.src[0]} alt={`slide-${index}`} draggable={false} />
-                            <h3>{item.name}</h3>
-                            <p>{item.title[0]}</p>
+                        <div className={clsx(styles.slide)} key={index}>
+                            {changeImage ? (
+                                <>
+                                    <img src={item.src[1]} alt={`slide-${index}`} draggable={false} />
+                                    <h3>{item.name}</h3>
+                                    <p>{item.title[1]}</p>
+                                </>
+                            ) : (
+                                <>
+                                    <img src={item.src[0]} alt={`slide-${index}`} draggable={false} />
+                                    <h3>{item.name}</h3>
+                                    <p>{item.title[0]}</p>
+                                </>
+                            )}
+                            <div className={clsx(styles.thumbnail, currentIndex === index ? styles.active : '')}>
+                                {item.src.map((src, idx) => (
+                                    <img src={src} alt={`thumbnail-${idx}`} draggable={false} 
+                                        onClick={() => setChangeImage(idx === 0 ? false: true)}
+                                    />
+                                ))}
+                            </div>
                         </div>
-                    ))}
+                        ))}
                     </div>
                 </div>
 

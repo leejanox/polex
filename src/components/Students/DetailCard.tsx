@@ -1,17 +1,27 @@
-//! 2025년 작품 카드
-import styles from '@styles/Temi.module.scss';
-import { MainHeader } from '@components/commons/Headers';
-import { MainFooter } from '@components/commons/Footers';
-import { TemiData } from './Senior';
-import { Github } from 'lucide-react';
-import { U_Button } from '@components/commons/Buttons';
+import { MainFooter } from "@components/commons/Footers"
+import { Github } from "lucide-react"
+import { Link, useParams } from "react-router-dom"
+import { U_Button } from "@components/commons/Buttons"
+import { MainHeader } from "@components/commons/Headers"
+import styles from "@styles/Detail.module.scss"
+import { useEffect, useRef } from "react"
+import { gsap } from "gsap"
+import type { DetailCardProps } from "./Senior"
 
-export const Temi = () => {
+export const DetailCard = ({data}: DetailCardProps) => {
 
-    const data = TemiData[0].data;
+    const { id } = useParams();
+    const currentId = parseInt(id as string);
+    const previousId = currentId > 1? currentId - 1 : parseInt(data.id) - 1;
+    const nextId = currentId < parseInt(data.id)? currentId + 1 : parseInt(data.id) + 1;
+
+    const imgRef = useRef<HTMLImageElement>(null);
+
+    useEffect(()=>{
+    },[])
 
     return (
-        <div className={styles.Temi}>
+        <div className={styles.DetailCard}>            
             <header>
                 <MainHeader />
             </header>
@@ -27,12 +37,19 @@ export const Temi = () => {
                         ))}
                     </div>
                     <div className={styles.buttons}>
+                        <Link to={`/senior/${previousId}`}>
+                            <U_Button>
+                                <p> 이전 작품 보기</p>
+                            </U_Button>
+                        </Link>
                         <U_Button>
-                            <p> 토리 영상 보기</p>
+                            <p> {`${data.title} 영상 보기`}</p>
                         </U_Button>
-                        <U_Button>
-                            <p> 다음 작품 보기</p>
-                        </U_Button>
+                        <Link to={`/senior/${nextId}`}>
+                            <U_Button>
+                                <p> 다음 작품 보기</p>
+                            </U_Button>
+                        </Link>
                     </div>
                 </section>
                 <aside className={styles.right}>
@@ -69,7 +86,7 @@ export const Temi = () => {
             </div>
             <footer>
                 <MainFooter />
-            </footer>
+            </footer>   
         </div>
     )
 }

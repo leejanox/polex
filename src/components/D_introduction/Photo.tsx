@@ -13,7 +13,7 @@ interface PhotoProps {
     setCurrIdx: (idx: number) => void
 }
 
-const Slide = ({photos, currIdx}: PhotoProps) => {
+export const Slide = ({photos, currIdx}: PhotoProps) => {
 
     const meshRef = useRef<THREE.Mesh>(null);
     const tts = useTexture(photos);
@@ -56,7 +56,7 @@ const Slide = ({photos, currIdx}: PhotoProps) => {
         </mesh>
     )
 }
-const Thumbnail = ({photos, currIdx, setCurrIdx}: PhotoProps) => {
+export const Thumbnail = ({photos, currIdx, setCurrIdx}: PhotoProps) => {
     return (
         <div className={styles.thumbnail}>
             {photos.map((photo, idx) => (

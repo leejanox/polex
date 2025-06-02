@@ -26,7 +26,7 @@ export const GuestBook = () => {
     });
 
     const fetchMessage = async () => {
-        const snapshot = await getDocs(collection(db, 'guestBook'));
+        const snapshot = await getDocs(collection(db, 'guestbook'));
         const fetched = snapshot.docs.map((doc)=>({
             ...doc.data() as Omit<Message, 'id'>,
             id: doc.id,
@@ -36,10 +36,13 @@ export const GuestBook = () => {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if(!newMessage.name || !newMessage.message) alert('모든 항목을 입력해주세요.');
+        if(!newMessage.name || !newMessage.message) {
+            alert('모든 항목을 입력해주세요.');
+            return;
+        }
         
         setActive(true);
-        await addDoc(collection(db, 'guestBook'), newMessage);
+        await addDoc(collection(db, 'guestbook'), newMessage);
         setNewMessage({
             id: '',
             name: '',
@@ -52,7 +55,7 @@ export const GuestBook = () => {
     }
 
     const handleLike = async (id: string) => {
-        const docRef = doc(db, 'guestBook', id);
+        const docRef = doc(db, 'guestbook', id);
         const docSnap = await getDoc(docRef);
         if(docSnap.exists()){
             const message = docSnap.data() as Message;
