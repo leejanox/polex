@@ -121,7 +121,7 @@ export const SeniorData2025: SeniorCardProps2[] = [
             title: "VR",
             category: "VR simulation ",
             team: "홍석준",
-            skill: ["Unity", "C#", "VR","AR"],
+            skill: ["Unity", "C++", "VR","AR"],
             date: "March, 2025 - June, 2025",
             remaining: "146 days more",
             imageUrl: [
@@ -160,23 +160,23 @@ export const SeniorData2025: SeniorCardProps2[] = [
     },
     {
         data: {
-            title: "손 영상인식 드로잉",
+            title: "에어 드로잉",
             category: "Motion Capture",
             team: "강규상",
-            skill: ["Python", "TensorFlow"],
+            skill: ["Python", "Mediapipe", "OpenCV"],
             date: "April, 2025 - May, 2025",
-            remaining: "146 days more",
+            remaining: "40 days more",
             imageUrl: [
                 "/assets/temi/Temi_Loading.gif",
                 "/assets/temi/Temi_Response.gif",
                 "/assets/temi/Temi_Wait.gif"
             ],
             introduction: `
-                안심링크 (AnsimLink)는 인터넷 상에서 이루어지는 개인과 개인간의 거래에서 발생할 수 있는 
+                에어 드로잉(Air Drawing)은 웹캠 영상 속 손의 움직임을 인식해 
                 
-                피싱 사이트를 미리 탐지해 사기를 예방할 수 있는 서비스입니다.
+                사용자가 공중에서 손짓만으로 그림을 그릴 수 있게 해주는 드로잉 인터페이스입니다.
             `,
-            links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
+            links: ["https://github.com/Dev-Sxxngii"],
         }
     },
     {
@@ -185,8 +185,8 @@ export const SeniorData2025: SeniorCardProps2[] = [
             category: "Arduino",
             team: "유선일",
             skill: ["Arduino"],
-            date: "March, 2025 - June, 2025",
-            remaining: "146 days more",
+            date: "May, 2025 - June, 2025",
+            remaining: "60 days more",
             imageUrl: [
                 "/assets/temi/Temi_Loading.gif",
                 "/assets/temi/Temi_Response.gif",
@@ -195,7 +195,7 @@ export const SeniorData2025: SeniorCardProps2[] = [
             introduction: `
                 태양열에 따라다니며 에너지를 측정하는 추적기
             `,
-            links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
+            links: ["https://eduino.kr/product/detail.html?product_no=5854&cate_no=181&display_group=1"],
         }
     }
 ]
@@ -273,12 +273,51 @@ export const DetailCard_list: DetailCard_list = [
     {
         data: {
             id: "2",
+            title: "스마트 진지구축 훈련",
+            subtitle: "Smart Reserve Army",
+            category: "쾌적한 환경에서의 훈련",
+            team: "홍석준",
+            skill: ["Unity", "VR","C++"],
+            date:  "May, 2025 - June, 2025",
+            people: [
+                {
+                    name: `홍석준 [팀장] `,
+                    role: `VR 진지 구축 시뮬레이션 시스템 아키텍처 설계 및 구현
+
+
+                        Unity 기반 3D 환경과 인터랙티브 VR 요소 개발
+
+
+                    적 침투 및 위협 감지 알고리즘 설계와 최적화
+
+
+                        사용자 경험 향상을 위한 인터페이스 적용
+                    `,
+                    link: "https://github.com/gihyeonchoi",
+                }
+            ],
+            introduction: `스마트 진지구축 훈련(Smart Reserve Army)은 기존의 낙후된 예비군 훈련장 환경을 변화시키기 위해 개발하게된 VR 기반 시뮬레이션 훈련입니다.
+                예비군 훈련은 현재 아직 전쟁이 진행중인 우리나라에서 전쟁 및 비상 상황에서 국민의 안전과 조국을 지키기위해 필수적인 과정이지만 실제 훈련장은 접근성도 떨어지고 날씨 같은 외부 환경에 영향을 크게 받는 문제가 있습니다.
+
+                이 프로젝트는 이런 외부 영향을 극복하고자 쾌적한 사무실형 공간에서 실제 전시 상황느낌을 가상으로 체험하고 훈련할 수 있는 몰입형 VR 훈련시스템을 개발해 보았습니다. 사용자는 무더운 여름철 혹은 폭설이나 폭우에도 훈련을 중단하지 않고 안전하고 재미있게 참여할 수 있으며 거리의 제약없이 어디서든 가능한 훈련을 생각해 보았습니다.
+
+                특히, 학업이나 직장 개인 사정으로 인해 본인 관할의 훈련장 방문을 해야하는 과정을 생략할 수 있고 가까운 거리에 위치한 정부기관 사무실에서 훈련 공간을 제공할 수 있어 훈련 참여율을 높일 수 있다고 생각합니다. 훈련 내용은 단순한 이론이 아닌 실제 전장과 비슷한 환경에서 적의 침투를 대응하는 과정으로 실전 감각을 높이는데 중점을 맞췄습니다.
+
+                시스템은 유니티엔진 기반의 정밀한 3D 와 C++코드로 구현된 효율적인 알고리즘을 사용하여 성능과 안정성을 둘다 챙겼습니다. 또 나중에는 저의 침투, 위협감지를 현실적이게 만들어 많은 변수들을 집어넣어 더 몰입할 수 있는 훈련이 가능할것으로 기대됩니다.
+
+                아직 부족한게 많지만 정말 훈련과정이 채택되어서 전국적으로 늘어난다면 편안한 환경에서 고품질 훈련을 받을 수 있을 것으로 예상됩니다.
+            `,
+        }
+    },
+    {
+        data: {
+            id: "3",
             title: "안심링크",
             subtitle: "AnsimLink",
             category: "인터넷 안전 브라우징 서비스",
             team: "최기현",
             skill: ["Python", "websocket"],
-            date: "2025년 4월 - 2025년 5월",
+            date: "April, 2025 - May, 2025",
             people: [
                 {
                     name: `최기현 [팀장] `,
@@ -307,5 +346,42 @@ export const DetailCard_list: DetailCard_list = [
                 이를 통해 사용자는 인터넷 거래 시 악성 사이트를 빠르고 정확하게 식별할 수 있으며, 거래의 안전성을 높이며 사이버 범죄의 피해를 줄일 수 있을것으로 예상됩니다.
             `,
         }
-    }
+    },
+    {
+        data: {
+            id: "4",
+            title: "에어 드로잉",
+            subtitle: "Air Drawing",
+            category: "제스처 인식 기반 드로잉 시스템",
+            team: "강규상",
+            skill: ["Python",  "Mediapipe", "OpenCV"],
+            date: "April, 2025 - May, 2025",
+            people: [
+                {
+                    name: `강규상 [팀장] `,
+                    role: `제스처 인식 기반 드로잉 시스템 개발
+
+
+                        Mediapipe 기반 오른손 판별 및 입력 필터링 로직 구현
+
+
+                    제스처 인식 및 모드 분류 기능 설계
+
+
+                        OpenCV를 활용한 실시간 손 좌표 추적 및 드로잉 기능 구현
+                    `,
+                    link: "https://github.com/Dev-Sxxngii",
+                }
+            ],
+            introduction: `에어 드로잉(Air Drawing)은 웹캠 영상 속 손의 움직임을 인식해, 사용자가 공중에서 손짓만으로 그림을 그릴 수 있게 해주는 드로잉 인터페이스입니다.
+                Mediapipe와 OpenCV를 활용하여 손의 좌표를 추적하고, 손가락의 펼침 상태에 따라 다양한 모드를 전환하여 사용자와의 상호작용을 구현했습니다.
+
+                많은 사람들이 AI라고 하면 대화형 인공지능을 먼저 떠올리지만, 이 프로젝트는 손 인식과 같은 시각 기반 AI 기술이 어떻게 실생활 속 인터페이스로 확장될 수 있는지를 보여줍니다.
+
+                이러한 기술은 복잡한 장비나 입력 없이도 사용자와 컴퓨터가 자연스럽게 상호작용할 수 있는 환경을 만들 수 있으며, 더 직관적이고 접근성 높은 시스템을 가능하게 합니다.
+
+                에어 드로잉은 기술 시연을 넘어, AI 기술이 일상 속에서 어떻게 유용하게 쓰일 수 있을지를 고민하며 개발된 프로젝트입니다.
+            `,
+        }
+    },
 ]
