@@ -4,9 +4,9 @@ import { Link, useParams } from "react-router-dom"
 import { U_Button } from "@components/commons/Buttons"
 import { MainHeader } from "@components/commons/Headers"
 import styles from "@styles/Detail.module.scss"
-import { useEffect, useRef } from "react"
-import { gsap } from "gsap"
 import type { DetailCardProps } from "./Senior"
+import { useState } from "react"
+import ReactPlayer from "react-player"
 
 export const DetailCard = ({data}: DetailCardProps) => {
 
@@ -15,10 +15,9 @@ export const DetailCard = ({data}: DetailCardProps) => {
     const previousId = currentId > 1? currentId - 1 : parseInt(data.id) - 1;
     const nextId = currentId < parseInt(data.id)? currentId + 1 : parseInt(data.id) + 1;
 
-    const imgRef = useRef<HTMLImageElement>(null);
 
-    useEffect(()=>{
-    },[])
+    const [videoOpen, setVideoOpen] = useState(false);
+
 
     return (
         <div className={styles.DetailCard}>            
@@ -37,24 +36,52 @@ export const DetailCard = ({data}: DetailCardProps) => {
                         ))}
                     </div>
                     <div className={styles.buttons}>
-                        <Link to={`/senior/${previousId}`}>
+                        <Link to={ currentId === 1 ?
+                            `/senior/${previousId}` : `/senior/${4}`
+                            }
+                        >
                             <U_Button>
                                 <p> 이전 작품 보기</p>
                             </U_Button>
                         </Link>
-                        <U_Button>
-                            <p> {`${data.title} 영상 보기`}</p>
+                        <U_Button onClick={()=>setVideoOpen((prev)=>!prev)}>
+                            {
+                                videoOpen ?
+                                    <p> {`${data.title} 영상 닫기`}</p> : <p> {`${data.title} 영상 보기`}</p>
+                            }
                         </U_Button>
-                        <Link to={`/senior/${nextId}`}>
+                        <Link to={ currentId === 4 ?
+                            `/senior/${1}` : `/senior/${nextId}`
+                            }
+                        >
                             <U_Button>
                                 <p> 다음 작품 보기</p>
                             </U_Button>
                         </Link>
                     </div>
+                    {
+                        videoOpen && (
+                            <div className={styles.videoContainer}>
+                                <ReactPlayer url={data.videoUrl} 
+                                    width="100%" height="40vh"
+                                    controls={true}
+                                    playing={true}
+                                    loop={true}
+                                    muted={true}
+                                    light={true}
+                                    playsinline={true}
+                                />
+                            </div>
+                        )
+                    }
                 </section>
                 <aside className={styles.right}>
                     <div className={styles.image}>
-                        <img src="/assets/posters/1.jpg" alt="Refik Anadol" />
+                        {
+                            data.imgUrls.map((v,i)=>(
+                                <img src={v} alt={`${data.title} ${i+1}`} key={i} />
+                            ))
+                        }
                     </div>
                     <div className={styles.info}>
                         <h3>팀원 소개</h3>

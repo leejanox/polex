@@ -210,6 +210,8 @@ export interface DetailCardProps {
             role: string;
             link: string;
         }[],
+        imgUrls: string[];
+        videoUrl: string;
         title: string;
         subtitle: string;
         category: string;
@@ -232,6 +234,8 @@ export const DetailCard_list: DetailCard_list = [
             team: "전석일 강규상",
             skill: ["Kotlin", "Python", "Java", "OpenAI API"],
             date: "March, 2025 - June, 2025",
+            imgUrls: ["/assets/temi/Temi_Wait.gif", "/assets/temi/Temi_Loading.gif", "/assets/temi/Temi_Response.gif"],
+            videoUrl: "https://youtu.be/Y4-JAoH4f08",
             people: [
                 {
                     name: `전석일 [팀장] `,
@@ -279,6 +283,8 @@ export const DetailCard_list: DetailCard_list = [
             team: "홍석준",
             skill: ["Unity", "VR","C++"],
             date:  "May, 2025 - June, 2025",
+            imgUrls: ["/assets/posters/1.jpg"],
+            videoUrl: "https://youtu.be/Y4-JAoH4f08",
             people: [
                 {
                     name: `홍석준 [팀장] `,
@@ -318,6 +324,8 @@ export const DetailCard_list: DetailCard_list = [
             team: "최기현",
             skill: ["Python", "websocket"],
             date: "April, 2025 - May, 2025",
+            imgUrls: ["/assets/posters/1.jpg"],
+            videoUrl: "https://youtu.be/Y4-JAoH4f08",
             people: [
                 {
                     name: `최기현 [팀장] `,
@@ -356,6 +364,8 @@ export const DetailCard_list: DetailCard_list = [
             team: "강규상",
             skill: ["Python",  "Mediapipe", "OpenCV"],
             date: "April, 2025 - May, 2025",
+            imgUrls: ["/assets/posters/1.jpg"],
+            videoUrl: "https://youtu.be/Y4-JAoH4f08",
             people: [
                 {
                     name: `강규상 [팀장] `,

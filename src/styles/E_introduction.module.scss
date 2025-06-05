@@ -517,7 +517,12 @@
                 flex: 2;
                 border: 1px solid $color-text-gray;
                 border-collapse: collapse;
-                padding: .5rem 1rem;
+                @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+                    padding: .5rem 0.6rem;
+                }
+                @media (min-width: $breakpoint-md) {
+                    padding: .5rem 1rem;
+                }
 
                 &:nth-child(2) {
                     flex: 6;
@@ -535,6 +540,17 @@
                     &:hover {
                         scale: 1.05;
                         color: rgba(255, 40, 40, 0.8);
+                    }
+                }
+
+                &:nth-child(3){
+                    @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+                        font-size: $text-size-sm;
+                        // text-wrap: nowrap;
+                    }
+
+                    @media (min-width: $breakpoint-md) {
+                        font-size: $text-size-md;
                     }
                 }
             }

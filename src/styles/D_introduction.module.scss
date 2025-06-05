@@ -280,6 +280,7 @@
         }
 
         @media (min-width: $breakpoint-md) {
+            align-items: center; justify-content: center;
             padding: $padding-xl 0;
             gap: $padding-lg * 4;
             font-size: $text-size-xl;
@@ -424,6 +425,7 @@
 
             span {
                 font-size: $text-size-md;
+                margin-right: 1rem;
             }
         }
     }
