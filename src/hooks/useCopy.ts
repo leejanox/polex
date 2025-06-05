@@ -10,7 +10,7 @@ export const useCopy = ({text}:{text:string}) => {
         setIsCopied(true);
         setTimeout(()=>{
             setIsCopied(false);
-        },10000);
+        },10);
     }
 
     return {isCopied,copy};

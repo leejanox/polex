@@ -5,7 +5,7 @@ import styles from '@styles/E_introduction.module.scss';
 import { Copy, MapPin, Phone, TramFront, TrendingUp } from 'lucide-react';
 import { useCopy } from '@hooks/useCopy';
 import { useEffect } from 'react';
-//! 1. 전시소개 , 오시는길
+
 export const E_introduction = () => {
 
     const {copy,isCopied} = useCopy({text:'02-541-8888'});

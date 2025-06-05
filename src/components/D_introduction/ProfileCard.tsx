@@ -1,9 +1,21 @@
 import styles from '@styles/D_introduction.module.scss';
 import { type ProfileCardProps } from '@components/D_introduction';
 import clsx from 'clsx';
+import { useCopy } from '@hooks/useCopy';
+import { Copy } from 'lucide-react';
+import { useEffect } from 'react';
 
 
 export const ProfileCard = ({data}: {data: ProfileCardProps}) => {
+
+    const {isCopied,copy} = useCopy({text:data.Email});
+    const {isCopied:isCopied2,copy:copy2} = useCopy({text:data.Phone});
+
+    useEffect(()=>{
+        if(isCopied) alert('email 복사 완료.');
+        if(isCopied2) alert('phone 복사 완료.');    
+    },[isCopied,isCopied2]);
+
     return (
         <div className={clsx(styles.profileCard)}>
             <div className={styles.top}>
@@ -13,8 +25,8 @@ export const ProfileCard = ({data}: {data: ProfileCardProps}) => {
                 <div className={styles.info}>
                     <h3>{data.Name}</h3>
                     <p>{data.Position}</p>
-                    <p>{data.Email}</p>
-                    <p>{data.Phone}</p>
+                    <p>{data.Email} <Copy onClick={copy}/></p>
+                    <p>{data.Phone} <Copy onClick={copy2}/></p>
                 </div>
             </div>
             <div className={styles.bottom}>
