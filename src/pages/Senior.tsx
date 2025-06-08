@@ -48,7 +48,10 @@ export const Senior = () => {
                 ) : (
                     <div className={clsx(styles.content, styles._2025)}>
                         {data2025.map((v,i)=>(
-                            <SeniorCard key={i} data={v.data} style='2025'/>
+                            <SeniorCard key={i} data={{
+                                ...v.data,
+                                description: v.data.description || '',
+                            }} style='2025'/>
                         ))}
                     </div>
                 )}
