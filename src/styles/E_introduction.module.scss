@@ -99,7 +99,30 @@
         }
     }
 
+    .imageContainer {
+        margin-bottom: 2rem;
+
+        @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+            width: 100%; height: auto;
+            border-bottom: 1px solid $color-text-gray;
+            padding:  $padding-md $padding-sm;
+        }
+
+        @media (min-width: $breakpoint-md) {
+            width: 100%; height: 100vh;
+            border-bottom: 1px solid $color-text-gray;
+            padding: $padding-md * 2 $padding-md * 2 ;
+            @include flex-center;
+            
+            img {
+                width: auto; height: 100%;
+                object-fit: fill;
+            }
+        }
+    }
+
     .videoContainer {
+        margin-bottom: 2rem;
         width: 100%; height: auto;
         @include flex-center;
         aspect-ratio: 16 / 9;

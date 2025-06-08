@@ -1,9 +1,8 @@
 import { EDdescriptionKorean, EDParticipationList, EDInfo } from './text';
 import styles from '@styles/E_introduction.module.scss';
-import ReactPlayer from 'react-player';
+//import ReactPlayer from 'react-player';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { U_Button } from '@components/commons/Buttons';
 export const HeroSection = () => {
 
@@ -20,17 +19,20 @@ export const HeroSection = () => {
                         <span>LOCATION</span>
                     </div>
                     <div className={clsx(styles.item)}>
-                        <h1>2025.06.25 - 06.27</h1>
+                        <h1>2025.06.20 - 06.25</h1>
                         <span>DATE</span>
                     </div>
                 </div>
             </div>
-            <div className={clsx(styles.videoContainer)}>
+            <div className={clsx(styles.imageContainer)}>
+                <img src={'/assets/posters/poster.png'} alt='poster' />
+            </div>
+            {/* <div className={clsx(styles.videoContainer)}>
                 <ReactPlayer url={'https://youtu.be/0EiszP7D1Rw?si=6plNKZzuZ8oDhve7'} 
                     width={'100%'} height={'100%'}
                     loop={true} muted={true} controls={false} playing={true}
                 />
-            </div>
+            </div> */}
             <div className={clsx(styles.buttonGroup1)}>
                 <Link to={'/학과소개'}>
                     <U_Button>
@@ -84,17 +86,12 @@ export const HeroSection = () => {
             <h1>작품 보러가기</h1>
             <Link to={'/junior'}>
                 <U_Button>
-                    <p>1학년</p>
+                    <p>생성형이미지 보러가기</p>
                 </U_Button>
             </Link>
             <Link to={'/senior'}>
                 <U_Button>
-                    <p>2학년</p>
-                </U_Button>
-            </Link>
-            <Link to={'/highTech'}>
-                <U_Button>
-                    <p>하이테크</p>
+                    <p>2학년 작품 보러가기</p>
                 </U_Button>
             </Link>
             </div>

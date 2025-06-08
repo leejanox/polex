@@ -1,7 +1,7 @@
 import { useRef, useState} from 'react';
 import styles from '@styles/Junior.module.scss';
 import { JuniorInfo } from './Junior';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Copy } from 'lucide-react';
 import clsx from 'clsx';
 
 export const Carousel = () => {
@@ -9,6 +9,15 @@ export const Carousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [changeImage, setChangeImage] = useState(false);
     const slideWidth = 100; // % 기준 한 슬라이드 너비
+
+    const handleCopy = (prompt: string) => {
+        if (prompt !== '') {
+            navigator.clipboard.writeText(prompt);
+            alert('프롬프트가 복사되었습니다.');
+        } else {
+            alert('프롬프트가 없습니다.');
+        }
+    };
 
     const handlePrev = () => {
         if (currentIndex > 0) {
@@ -24,7 +33,7 @@ export const Carousel = () => {
 
     return (
         <div className={styles.carousel}>
-            <h2>1학년 생성형 이미지</h2>
+            <h2>생성형 이미지</h2>
             <div className={styles.sliderWrapper}>
                 <button className={styles.prev} onClick={handlePrev} disabled={currentIndex === 0}>
                     <ArrowLeft/>
@@ -39,17 +48,29 @@ export const Carousel = () => {
                     {JuniorInfo.map((item, index) => (
                         <div className={clsx(styles.slide)} key={index}>
                             {changeImage ? (
-                                <>
+                                <div className={styles.slideContent}>
                                     <img src={item.src[1]} alt={`slide-${index}`} draggable={false} />
                                     <h3>{item.name}</h3>
                                     <p>{item.title[1]}</p>
-                                </>
+                                    {item.prompt && 
+                                        <div className={styles.copy}>
+                                            <span>프롬프트 복사</span>
+                                            <Copy onClick={() => handleCopy(item.prompt[1])}/>
+                                        </div>
+                                    }
+                                </div>
                             ) : (
-                                <>
+                                <div className={styles.slideContent}>
                                     <img src={item.src[0]} alt={`slide-${index}`} draggable={false} />
                                     <h3>{item.name}</h3>
                                     <p>{item.title[0]}</p>
-                                </>
+                                    {item.prompt && 
+                                        <div className={styles.copy}>
+                                            <span>프롬프트 복사</span>
+                                            <Copy onClick={() => handleCopy(item.prompt[0])}/>
+                                        </div>
+                                    }
+                                </div>
                             )}
                             <div className={clsx(styles.thumbnail, currentIndex === index ? styles.active : '')}>
                                 {item.src.map((src, idx) => (
@@ -71,6 +92,7 @@ export const Carousel = () => {
                     <ArrowRight/>
                 </button>
             </div>
+
             <div className={styles.dots}>
                 {JuniorInfo.map((_, index) => (
                     <div key={index} className={clsx(styles.dot, {[styles.active]: currentIndex === index})}

@@ -1,7 +1,6 @@
 import { useScrollToTop } from '@hooks/useScrollToTop'
 import { D_introduction } from '@pages/D_introduction'
 import { E_introduction } from '@pages/E_introduction'
-import { HighTech } from '@pages/HighTech'
 import { Junior } from '@pages/Junior'
 import { Senior } from '@pages/Senior'
 import { Routes, Route } from 'react-router-dom'
@@ -24,11 +23,8 @@ export const Router = () => {
                 <Route path={`/senior/${v.data.id}`} element={<SeniorDetail title={v.data.title}/>} />
             ))}
 
-            <Route path='/highTech' element={<HighTech/>} />
-            <Route path='/하이테크' element={<HighTech/>} />
-
             <Route path='/junior' element={<Junior/>} />
-            <Route path='/1학년' element={<Junior/>} />
+            <Route path='/생성형이미지' element={<Junior/>} />
 
             <Route path='/학과소개' element={<D_introduction/>} />
             <Route path='/majorDescription' element={<D_introduction/>} />
