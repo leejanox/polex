@@ -45,13 +45,13 @@ export default defineConfig({
     outDir:'dist',
     assetsDir:'assets',
     sourcemap:true,
-    rollupOptions:{
-      external:['three'],
-      output:{
-        manualChunks:{
-          three:['three'],
-        }
-      }
-    }
+    // rollupOptions:{
+    //   external:['three'],
+    //   output:{
+    //     manualChunks:{
+    //       three:['three'],
+    //     }
+    //   }
+    // }
   }
 })
