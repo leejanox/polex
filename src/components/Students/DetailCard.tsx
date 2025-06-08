@@ -4,8 +4,7 @@ import { Link, useParams } from "react-router-dom"
 import { U_Button } from "@components/commons/Buttons"
 import { MainHeader } from "@components/commons/Headers"
 import styles from "@styles/Detail.module.scss"
-import { useEffect, useRef } from "react"
-import { gsap } from "gsap"
+import { useEffect } from "react"
 import type { DetailCardProps } from "./Senior"
 
 export const DetailCard = ({data}: DetailCardProps) => {
@@ -15,7 +14,6 @@ export const DetailCard = ({data}: DetailCardProps) => {
     const previousId = currentId > 1? currentId - 1 : parseInt(data.id) - 1;
     const nextId = currentId < parseInt(data.id)? currentId + 1 : parseInt(data.id) + 1;
 
-    const imgRef = useRef<HTMLImageElement>(null);
 
     useEffect(()=>{
     },[])

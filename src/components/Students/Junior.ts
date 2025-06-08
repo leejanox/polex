@@ -3,7 +3,7 @@ export type JuniorProps = {
     name: string;
     title: string[];
     src: string[];
-    prompt?: string[];
+    prompt: string[];
 }
 
 export const JuniorInfo: JuniorProps[] = [
