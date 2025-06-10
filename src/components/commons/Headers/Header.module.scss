@@ -56,7 +56,7 @@
             background-color: transparent;
             backdrop-filter: blur(10px);
             color: $color-white;
-            mix-blend-mode: difference;
+            //mix-blend-mode: difference;
             @include flex-center;
             flex-direction: column; gap: 4rem;
             z-index: $z-index-modal;
@@ -91,7 +91,7 @@
             background-color: transparent;
             backdrop-filter: blur(10px);
             color: $color-white;
-            mix-blend-mode: difference;
+            //mix-blend-mode: difference;
             @include flex-center;
             flex-direction: column; gap: 4rem;
             z-index: $z-index-modal;
