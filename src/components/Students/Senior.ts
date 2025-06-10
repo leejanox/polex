@@ -167,9 +167,9 @@ export const SeniorData2025: SeniorCardProps2[] = [
             date: "April, 2025 - May, 2025",
             remaining: "146 days more",
             imageUrl: [
-                "/assets/temi/Temi_Loading.gif",
-                "/assets/temi/Temi_Response.gif",
-                "/assets/temi/Temi_Wait.gif"
+                "/assets/photos/gyu1.png",
+                "/assets/photos/gyu1.png",
+                "/assets/photos/gyu1.png"
             ],
             introduction: `
                 안심링크 (AnsimLink)는 인터넷 상에서 이루어지는 개인과 개인간의 거래에서 발생할 수 있는 
@@ -381,7 +381,7 @@ export const DetailCard_list: DetailCard_list = [
             team: "강규상",
             skill: ["Python", "Mediapipe", "OpenCV"],
             date: "2025년 4월 - 2025년 5월",
-            youtube:'https://youtu.be/MJIkinJAzVI?si=GwBgLvCSllkhiIYW',
+            youtube:'https://youtu.be/X6ZC51BcKFo',
             people: [
                 {
                     name: `강규상 [팀장] `,
@@ -400,7 +400,8 @@ export const DetailCard_list: DetailCard_list = [
                 }
             ],
             introduction: `에어 드로잉(Air Drawing)은 웹캠 영상 속 손의 움직임을 인식해, 사용자가 공중에서 손짓만으로 그림을 그릴 수 있게 해주는 드로잉 인터페이스입니다.
-                Mediapipe와 OpenCV를 활용하여 손의 좌표를 추적하고, 손가락의 펼침 상태에 따라 다양한 모드를 전환하여 사용자와의 상호작용을 구현했습니다.
+            
+            Mediapipe와 OpenCV를 활용하여 손의 좌표를 추적하고, 손가락의 펼침 상태에 따라 다양한 모드를 전환하여 사용자와의 상호작용을 구현했습니다.
 
                 많은 사람들이 AI라고 하면 대화형 인공지능을 먼저 떠올리지만, 이 프로젝트는 손 인식과 같은 시각 기반 AI 기술이 어떻게 실생활 속 인터페이스로 확장될 수 있는지를 보여줍니다.
                 이러한 기술은 복잡한 장비나 입력 없이도 사용자와 컴퓨터가 자연스럽게 상호작용할 수 있는 환경을 만들 수 있으며, 더 직관적이고 접근성 높은 시스템을 가능하게 합니다.
@@ -409,9 +410,9 @@ export const DetailCard_list: DetailCard_list = [
             `,
             next:'토리',
             src: [
-                "/assets/photos/ansim2.png",
-                "/assets/photos/ansim1.png",
-                "/assets/photos/ansim1.png"
+                "/assets/photos/gyu1.png",
+                "/assets/photos/gyu1.png",
+                "/assets/photos/gyu1.png"
             ]
         }
     }
