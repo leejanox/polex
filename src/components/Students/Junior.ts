@@ -53,10 +53,18 @@ The entire scene has photorealistic detail with accurate light physics: realisti
     },
     {
         id: 3,
-        name: '박중학생',
-        title: ['중학생 소개', '중학생 소개'],
-        src: ['/assets/posters/3.jpg', '/assets/posters/3.jpg'],
-        prompt: ['', '']
+        name: '김고은',
+        title: ['잠들기 전의 아이들', '슬픔'],
+        src: ['/assets/posters/janox1.jpg', '/assets/posters/janox2.jpg'],
+        prompt: [`
+        A surreal full-color nighttime photograph of a quiet, grassy valley surrounded by lush forest. The Milky Way twinkles in the sky, and a young brother and sister sit quietly in the frame diagonally, holding hands and completely absorbed in the music, wearing headsets that are a bit too big for a child. The wind blows occasionally as the two are framed from behind.
+
+The children are dressed in plain, yet soft-feeling pajamas, and the peaceful landscape reflects the couple’s deep relaxation. The surroundings, bathed in soft moonlight, create a tranquil, cinematic atmosphere with subtle shadows and highlights.
+
+The entire image was shot in ultra-high resolution, resulting in a sharp, clear image with no depth of field or blur, and every element from the sheep to the forest background is in perfect focus. The result is a tranquil, surreal, and edited photograph with surreal texture, clarity, and lighting.
+`, `
+Erstellen Sie ein sehr realistisches und filmisches Bild mit Weitwinkelaufnahme. Die Tränen und Nöte der Menschen sollen im Foto zum Ausdruck kommen.
+`]
     },
     {
         id: 4,
