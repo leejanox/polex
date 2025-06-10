@@ -10,9 +10,9 @@ import type { DetailCardProps } from "./Senior"
 export const DetailCard = ({data}: DetailCardProps) => {
 
     const { id } = useParams();
-    const currentId = parseInt(id as string);
-    const previousId = currentId > 1? currentId - 1 : parseInt(data.id) - 1;
-    const nextId = currentId < parseInt(data.id)? currentId + 1 : parseInt(data.id) + 1;
+    //const currentId = parseInt(id as string);
+    //const previousId = currentId > 1? currentId - 1 : parseInt(data.id) - 1;
+    //const nextId = currentId < parseInt(data.id)? currentId + 1 : parseInt(data.id) + 1;
 
 
     useEffect(()=>{
@@ -35,7 +35,7 @@ export const DetailCard = ({data}: DetailCardProps) => {
                         ))}
                     </div>
                     <div className={styles.buttons}>
-                        <Link to={`/senior/${previousId}`}>
+                        <Link to={`/senior/${data.next}`}>
                             <U_Button>
                                 <p> 이전 작품 보기</p>
                             </U_Button>
@@ -43,7 +43,7 @@ export const DetailCard = ({data}: DetailCardProps) => {
                         <U_Button>
                             <p> {`${data.title} 영상 보기`}</p>
                         </U_Button>
-                        <Link to={`/senior/${nextId}`}>
+                        <Link to={`/senior/${data.next}`}>
                             <U_Button>
                                 <p> 다음 작품 보기</p>
                             </U_Button>
