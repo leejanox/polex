@@ -160,7 +160,7 @@ export const SeniorData2025: SeniorCardProps2[] = [
     },
     {
         data: {
-            title: "손 영상인식 드로잉",
+            title: "에어드로잉",
             category: "Motion Capture",
             team: "강규상",
             skill: ["Python", "TensorFlow"],
@@ -172,9 +172,9 @@ export const SeniorData2025: SeniorCardProps2[] = [
                 "/assets/photos/gyu1.png"
             ],
             introduction: `
-                안심링크 (AnsimLink)는 인터넷 상에서 이루어지는 개인과 개인간의 거래에서 발생할 수 있는 
-                
-                피싱 사이트를 미리 탐지해 사기를 예방할 수 있는 서비스입니다.
+            에어 드로잉(Air Drawing)은 웹캠 영상 속 손의 움직임을 인식해, 사용자가 공중에서 손짓만으로 그림을 그릴 수 있게 해주는 드로잉 인터페이스입니다.
+            
+            Mediapipe와 OpenCV를 활용하여 손의 좌표를 추적하고, 손가락의 펼침 상태에 따라 다양한 모드를 전환하여 사용자와의 상호작용을 구현했습니다.
             `,
             links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
         }
