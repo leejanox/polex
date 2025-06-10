@@ -75,45 +75,51 @@ Erstellen Sie ein sehr realistisches und filmisches Bild mit Weitwinkelaufnahme.
     },
     {
         id: 5,
-        name: '이중학생',
-        title: ['중학생 소개', '중학생 소개'],
-        src: ['/assets/posters/5.jpg', '/assets/posters/5.jpg'],
+        name: '김유농',
+        title: ['Ai and the City of the Future', 'The Age of AI and Humanity'],
+        src: ['/assets/posters/unong1.png', '/assets/posters/unong2.png'],
         prompt: ['', '']
     },
     {
         id: 6,
-        name: '박중학생',
-        title: ['중학생 소개', '중학생 소개'],
-        src: ['/assets/posters/6.jpg', '/assets/posters/6.jpg'],
+        name: '남상석',
+        title: ['복제인간에 관한 고찰', '황폐한 미래도시'],
+        src: ['/assets/posters/nam1.png', '/assets/posters/nam2.png'],
         prompt: ['', '']
     },
     {
         id: 7,
-        name: '박중학생',
-        title: ['중학생 소개', '중학생 소개'],
-        src: ['/assets/posters/7.jpg', '/assets/posters/7.jpg'],
+        name: '유은이',
+        title: ['미래도시의전통시장', '미래도시의황금빛캠퍼스'],
+        src: ['/assets/posters/euni1.png', '/assets/posters/euni2.png'],
         prompt: ['', '']
     },
     {
         id: 8,
-        name: '박중학생',
-        title: ['중학생 소개', '중학생 소개'],
-        src: ['/assets/posters/8.jpg', '/assets/posters/8.jpg'],
+        name: '주성돈',
+        title: ['퉁퉁퉁퉁퉁퉁퉁퉁퉁 사후르', '트랄라레로 트랄랄라'],
+        src: ['/assets/posters/ju1.png', '/assets/posters/ju2.png'],
         prompt: ['', '']
     },
     {
         id: 9,
-        name: '박중학생',
-        title: ['중학생 소개', '중학생 소개'],
-        src: ['/assets/posters/9.jpg', '/assets/posters/9.jpg'],
+        name: '최사랑',
+        title: ['AI와일자리경쟁', '안드로이드아내'],
+        src: ['/assets/posters/choi1.jpg', '/assets/posters/choi2.jpg'],
         prompt: ['', '']
     },
     {
         id: 10,
-        name: '박중학생',
-        title: ['중학생 소개', '중학생 소개'],
-        src: ['/assets/posters/10.jpg', '/assets/posters/10.jpg'],
+        name: '황헌재',
+        title: ['수타국수코끼리', '유물이된아이폰'],
+        src: ['/assets/posters/hun1.jpg', '/assets/posters/hun2.jpg'],
         prompt: ['', '']
     },
-
+    {
+        id: 11,
+        name: '최기현',
+        title: ['AI로 재구성한 학교풍경1', 'AI로 재구성한 학교풍경2'],
+        src: ['/assets/posters/gi1.png', '/assets/posters/gi2.png'],
+        prompt: ['', '']
+    },
 ]   

@@ -176,6 +176,7 @@
     .buttonGroup2 {
         width: 100%; height: auto;
         @include flex-center;
+        margin-top: 2rem;
 
         @media (min-width: $breakpoint-xs) and (max-width: $breakpoint-md){
             flex-direction: column;
