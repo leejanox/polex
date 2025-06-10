@@ -68,9 +68,9 @@ Erstellen Sie ein sehr realistisches und filmisches Bild mit Weitwinkelaufnahme.
     },
     {
         id: 4,
-        name: '김중학생',
-        title: ['중학생 소개', '중학생 소개'],
-        src: ['/assets/posters/4.jpg', '/assets/posters/4.jpg'],
+        name: '홍석준',
+        title: ['무중력 왈츠', '중학생 소개'],
+        src: ['/assets/posters/hong1.jpg', '/assets/posters/4.jpg'],
         prompt: ['', '']
     },
     {
