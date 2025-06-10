@@ -92,7 +92,6 @@ export interface SeniorCardProps2 {
         introduction: string;
         description?: string;
         links: string[];
-        next:string;
     }
 }
 export const SeniorData2025: SeniorCardProps2[] = [
@@ -115,7 +114,6 @@ export const SeniorData2025: SeniorCardProps2[] = [
 
                 이 혁신적인 시스템을 통해 방문자는 전시회 작품에 대해 더 깊이 있는 정보와 상호작용을 즐길 수 있습니다.`,
             links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
-            next:'VR'
         },
     },
     {
@@ -137,7 +135,6 @@ export const SeniorData2025: SeniorCardProps2[] = [
                 전시 상황을 가정하여 만든 실전형 진지 구축 및 적 침투 대응 훈련 VR시뮬레이션
             `,
             links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
-            next:'안심링크'
         }
     },
     {
@@ -181,7 +178,6 @@ export const SeniorData2025: SeniorCardProps2[] = [
                 피싱 사이트를 미리 탐지해 사기를 예방할 수 있는 서비스입니다.
             `,
             links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
-            next:'토리'
         }
     },
     {
@@ -222,6 +218,7 @@ export interface DetailCardProps {
         skill: string[];
         date: string;
         introduction: string;
+        next:string;
     },   
 }
 
@@ -261,6 +258,7 @@ export const DetailCard_list: DetailCard_list = [
                         TTS 출력 제어 및 표정 애니메이션 구현 및 연동
                     `,
                     link: "https://github.com/praySI1070",
+                    next:'안심링크'
                 }
             ],
             introduction: `Temi는 자율 주행이 가능한 인공지능 로봇으로, 마이크, 스피커, 레이더 등 다양한 센서와 자원을 내장하고 있어 사용자와의 상호작용이 가능합니다. 그러나 현재의 Temi는 제한된 반응 패턴과 정해진 동작만을 반복하기 때문에, 사용자에게 단조로운 인상을 줄 수 있습니다. 
@@ -311,6 +309,7 @@ export const DetailCard_list: DetailCard_list = [
 
                 이를 통해 사용자는 인터넷 거래 시 악성 사이트를 빠르고 정확하게 식별할 수 있으며, 거래의 안전성을 높이며 사이버 범죄의 피해를 줄일 수 있을것으로 예상됩니다.
             `,
+            next:'VR'
         }
     }
 ]
