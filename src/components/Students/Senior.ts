@@ -92,6 +92,7 @@ export interface SeniorCardProps2 {
         introduction: string;
         description?: string;
         links: string[];
+        next:string;
     }
 }
 export const SeniorData2025: SeniorCardProps2[] = [
@@ -114,6 +115,7 @@ export const SeniorData2025: SeniorCardProps2[] = [
 
                 이 혁신적인 시스템을 통해 방문자는 전시회 작품에 대해 더 깊이 있는 정보와 상호작용을 즐길 수 있습니다.`,
             links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
+            next:'VR'
         },
     },
     {
@@ -135,6 +137,7 @@ export const SeniorData2025: SeniorCardProps2[] = [
                 전시 상황을 가정하여 만든 실전형 진지 구축 및 적 침투 대응 훈련 VR시뮬레이션
             `,
             links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
+            next:'안심링크'
         }
     },
     {
@@ -156,6 +159,7 @@ export const SeniorData2025: SeniorCardProps2[] = [
                 누구나 간편하게 사용할 수 있도록 설계한 UI를 제공하며 불필요한 작업은 피하고 메시지만 있으면 바로 악성 사이트 탐지가 가능합니다.
             `,
             links: ["https://github.com/gihyeonchoi"],
+            next:'드로잉잉'
         }
     },
     {
@@ -177,6 +181,7 @@ export const SeniorData2025: SeniorCardProps2[] = [
                 피싱 사이트를 미리 탐지해 사기를 예방할 수 있는 서비스입니다.
             `,
             links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
+            next:'토리'
         }
     },
     {
