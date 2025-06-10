@@ -16,9 +16,11 @@ export const Router = () => {
         <Routes>
             <Route path='/senior' element={<Senior/>} />
             <Route path='/2학년' element={<Senior/>} />
+            
             {DetailCard_list.map((v)=>(
                 <Route path={`/senior/${v.data.title}`} element={<SeniorDetail title={v.data.title}/>} />
             ))}
+            
             {DetailCard_list.map((v)=>(
                 <Route path={`/senior/${v.data.id}`} element={<SeniorDetail title={v.data.title}/>} />
             ))}
