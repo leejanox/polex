@@ -122,4 +122,26 @@ Erstellen Sie ein sehr realistisches und filmisches Bild mit Weitwinkelaufnahme.
         src: ['/assets/posters/gi1.png', '/assets/posters/gi2.png'],
         prompt: ['', '']
     },
+    {
+        id: 12,
+        name: '전석일',
+        title: ['기어의 심장(Heart of Gears)', '디지털 오벨리스크(Digital Obelisk)'],
+        src: ['/assets/posters/il1.png', '/assets/posters/il2.png'],
+        prompt: [`
+        steampunk,factory,gears,industrial,machinery,highlydetailed,intricate,metal,brass,copper,rust,dark atmosphere,warm lighting,fog,smoke,large gears,steam pipes,vintage,vintage machinery,mechanical,old-fashioned,mechanical arms,gears in motion,retro-futuristic,dimly lit,detailed textures,(highlydetailed:1.5),(steampunk style:1.3),(grungy:1.2),metallic reflections,(rusted metal:1.3),(steam rising:1.2),(countless gears:1.6),(overwhelming gears:1.4),(gear labyrinth:1.5)
+        `
+        ,`
+        masterpiece,(bestquality),highlydetailed,ultra-detailed,futuristic,cyberpunk,cityscape,neonlights,skyscrapers,(distantmoon),glowingbillboards,(holograms),(rainyweather),reflectivepuddles,(electricblue:1.5),(purplepinkneon),foggy,hightecharchitecture,metallicsurfaces,(flyingrobots),(citylights),(dystopian),darksky,(highcontrastlighting),urbanchaos,technologytheme,(firstpersonview:1.5),(endlessskyscrapers:2),(massivecitygrid),(tallbuildings:2.5),(viewfromstreetlevel),(lookingup),(overheadbillboards),(toweringhighrises),(cyberpunkvibe:2),(neonlitstreets),(glowingadvertisements),(techytextures),(grittyatmosphere),(hackerfeel),(urbandecay)
+        `]
+    },
+    {
+        id: 13,
+        name: '김민찬',
+        title: ['돌돌돌돌 하르방', '선택의 순간'],
+        src: ['/assets/posters/min1.png', '/assets/posters/min2.png'],
+        prompt: [`
+        `
+        ,`
+        `]
+    },
 ]   

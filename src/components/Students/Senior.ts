@@ -146,9 +146,9 @@ export const SeniorData2025: SeniorCardProps2[] = [
             date: "April, 2025 - May, 2025",
             remaining: "146 days more",
             imageUrl: [
-                "/assets/temi/Temi_Loading.gif",
-                "/assets/temi/Temi_Response.gif",
-                "/assets/temi/Temi_Wait.gif"
+                "/assets/photos/ansim2.png",
+                "/assets/photos/ansim1.png",
+                "/assets/photos/ansim1.png"
             ],
             introduction: `
                 '안심링크' 는 컴퓨터에 익숙하지 않은 디지털 소외계층의 인터넷 거래 시 발생하는 사기를 미연에 방지할 수 있는 서비스를 제공합니다.
@@ -217,6 +217,8 @@ export interface DetailCardProps {
         skill: string[];
         date: string;
         introduction: string;
+        youtube: string;
+        src: string[];
         next:string;
     },   
 }
@@ -233,6 +235,7 @@ export const DetailCard_list: DetailCard_list = [
             team: "전석일 강규상",
             skill: ["Kotlin", "Python", "Java", "OpenAI API"],
             date: "March, 2025 - June, 2025",
+            youtube:'https://youtu.be/MJIkinJAzVI?si=GwBgLvCSllkhiIYW',
             people: [
                 {
                     name: `전석일 [팀장] `,
@@ -269,7 +272,12 @@ export const DetailCard_list: DetailCard_list = [
 
                 이 챗봇 시스템은 ‘미래 도시’를 주제로 한 전시 환경에서, 인공지능 기술이 사람과 어떤 방식으로 상호작용할 수 있는지를 관람객이 직접 경험할 수 있도록 설계되었습니다.
             `,
-            next:'안심링크'
+            next:'안심링크',
+            src: [
+                "/assets/temi/Temi_Response.gif",
+                "/assets/temi/Temi_Loading.gif",
+                "/assets/temi/Temi_Response.gif",
+            ]
         }
     },
     {
@@ -281,6 +289,7 @@ export const DetailCard_list: DetailCard_list = [
             team: "최기현",
             skill: ["Python", "websocket"],
             date: "2025년 4월 - 2025년 5월",
+            youtube:'https://youtu.be/MJIkinJAzVI?si=GwBgLvCSllkhiIYW',
             people: [
                 {
                     name: `최기현 [팀장] `,
@@ -308,7 +317,12 @@ export const DetailCard_list: DetailCard_list = [
 
                 이를 통해 사용자는 인터넷 거래 시 악성 사이트를 빠르고 정확하게 식별할 수 있으며, 거래의 안전성을 높이며 사이버 범죄의 피해를 줄일 수 있을것으로 예상됩니다.
             `,
-            next:'스마트 진지구축 훈련'
+            next:'스마트 진지구축 훈련',
+            src: [
+                "/assets/photos/ansim1.png",
+                "/assets/photos/ansim1.png",
+                "/assets/photos/ansim1.png"
+            ]
         }
     },
     {
@@ -320,6 +334,7 @@ export const DetailCard_list: DetailCard_list = [
             team: "홍석준",
             skill: ["Unity", "VR","C++"],
             date: "2025년 4월 - 2025년 6월",
+            youtube:'https://youtu.be/MJIkinJAzVI?si=GwBgLvCSllkhiIYW',
             people: [
                 {
                     name: `홍석준  [팀장] `,
@@ -349,7 +364,12 @@ export const DetailCard_list: DetailCard_list = [
 
                 아직 부족한게 많지만 정말 훈련과정이 채택되어서 전국적으로 늘어난다면 편안한 환경에서 고품질 훈련을 받을 수 있을 것으로 예상됩니다.
             `,
-            next:'에어드로잉'
+            next:'에어드로잉',
+            src: [
+                "/assets/photos/ansim2.png",
+                "/assets/photos/ansim1.png",
+                "/assets/photos/ansim1.png"
+            ]
         }
     },
     {
@@ -361,6 +381,7 @@ export const DetailCard_list: DetailCard_list = [
             team: "강규상",
             skill: ["Python", "Mediapipe", "OpenCV"],
             date: "2025년 4월 - 2025년 5월",
+            youtube:'https://youtu.be/MJIkinJAzVI?si=GwBgLvCSllkhiIYW',
             people: [
                 {
                     name: `강규상 [팀장] `,
@@ -386,7 +407,12 @@ export const DetailCard_list: DetailCard_list = [
 
                 에어 드로잉은 기술 시연을 넘어, AI 기술이 일상 속에서 어떻게 유용하게 쓰일 수 있을지를 고민하며 개발된 프로젝트입니다.
             `,
-            next:'토리'
+            next:'토리',
+            src: [
+                "/assets/photos/ansim2.png",
+                "/assets/photos/ansim1.png",
+                "/assets/photos/ansim1.png"
+            ]
         }
     }
 ]

@@ -89,6 +89,10 @@
                         line-height: 1.5;
                         letter-spacing: .1rem;
                     }
+
+                    .video {
+                        margin-bottom: $padding-md;
+                    }
                 }
 
                 @media (min-width: $breakpoint-md) {
@@ -97,6 +101,11 @@
                     display: flex; flex-direction: column;
                     gap: $padding-md;
                     margin-bottom: $padding-lg;
+
+                    .video {
+                        width: 100%; height: 400px;
+                        margin-bottom: $padding-md;
+                    }
                 }
             }
             

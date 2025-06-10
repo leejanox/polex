@@ -5,8 +5,9 @@ import { Link } from "react-router-dom"
 import { U_Button } from "@components/commons/Buttons"
 import { MainHeader } from "@components/commons/Headers"
 import styles from "@styles/Detail.module.scss"
-import { useEffect } from "react"
+import { useState } from "react"
 import type { DetailCardProps } from "./Senior"
+import ReactPlayer from "react-player"
 
 export const DetailCard = ({data}: DetailCardProps) => {
 
@@ -14,10 +15,8 @@ export const DetailCard = ({data}: DetailCardProps) => {
     //const currentId = parseInt(id as string);
     //const previousId = currentId > 1? currentId - 1 : parseInt(data.id) - 1;
     //const nextId = currentId < parseInt(data.id)? currentId + 1 : parseInt(data.id) + 1;
+    const [showVideo, setShowVideo] = useState(false);
 
-
-    useEffect(()=>{
-    },[])
 
     return (
         <div className={styles.DetailCard}>            
@@ -31,6 +30,11 @@ export const DetailCard = ({data}: DetailCardProps) => {
                         <p>{data.subtitle}</p>
                     </div>
                     <div className={styles.introduction}>
+                    {showVideo && (
+                        <div className={styles.video}>
+                            <ReactPlayer url={data.youtube} controls={false} playing={true} loop={true} muted={true} width='100%' height='100%' />
+                        </div>
+                    )}
                         {data.introduction.split('\n').map((v,i)=>(
                             <p key={i}>{v}<br /></p>
                         ))}
@@ -41,9 +45,15 @@ export const DetailCard = ({data}: DetailCardProps) => {
                                 <p> 이전 작품 보기</p>
                             </U_Button>
                         </Link>
-                        <U_Button>
-                            <p> {`${data.title} 영상 보기`}</p>
-                        </U_Button>
+                        {showVideo ? (
+                            <U_Button onClick={()=>setShowVideo(false)}>
+                                <p> {`${data.title} 영상 닫기`}</p>
+                            </U_Button>
+                        ) : (
+                            <U_Button onClick={()=>setShowVideo((prev)=>!prev)}>
+                                <p> {`${data.title} 영상 보기`}</p>
+                            </U_Button>
+                        )}
                         <Link to={`/senior/${data.next}`}>
                             <U_Button>
                                 <p> 다음 작품 보기</p>
@@ -53,7 +63,7 @@ export const DetailCard = ({data}: DetailCardProps) => {
                 </section>
                 <aside className={styles.right}>
                     <div className={styles.image}>
-                        <img src="/assets/posters/1.jpg" alt="Refik Anadol" />
+                        <img src={data.src[0]} alt={data.title} />
                     </div>
                     <div className={styles.info}>
                         <h3>팀원 소개</h3>
