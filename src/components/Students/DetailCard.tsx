@@ -1,6 +1,7 @@
 import { MainFooter } from "@components/commons/Footers"
 import { Github } from "lucide-react"
-import { Link, useParams } from "react-router-dom"
+//import { Link, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { U_Button } from "@components/commons/Buttons"
 import { MainHeader } from "@components/commons/Headers"
 import styles from "@styles/Detail.module.scss"
@@ -9,7 +10,7 @@ import type { DetailCardProps } from "./Senior"
 
 export const DetailCard = ({data}: DetailCardProps) => {
 
-    const { id } = useParams();
+    //const { id } = useParams();
     //const currentId = parseInt(id as string);
     //const previousId = currentId > 1? currentId - 1 : parseInt(data.id) - 1;
     //const nextId = currentId < parseInt(data.id)? currentId + 1 : parseInt(data.id) + 1;
