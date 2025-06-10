@@ -156,7 +156,6 @@ export const SeniorData2025: SeniorCardProps2[] = [
                 누구나 간편하게 사용할 수 있도록 설계한 UI를 제공하며 불필요한 작업은 피하고 메시지만 있으면 바로 악성 사이트 탐지가 가능합니다.
             `,
             links: ["https://github.com/gihyeonchoi"],
-            next:'드로잉잉'
         }
     },
     {
