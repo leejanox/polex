@@ -55,7 +55,7 @@ The entire scene has photorealistic detail with accurate light physics: realisti
         id: 3,
         name: '김고은',
         title: ['잠들기 전의 아이들', '슬픔'],
-        src: ['/assets/posters/janox1.jpg', '/assets/posters/janox2.jpg'],
+        src: ['/assets/posters/janox1.png', '/assets/posters/janox2.png'],
         prompt: [`
         A surreal full-color nighttime photograph of a quiet, grassy valley surrounded by lush forest. The Milky Way twinkles in the sky, and a young brother and sister sit quietly in the frame diagonally, holding hands and completely absorbed in the music, wearing headsets that are a bit too big for a child. The wind blows occasionally as the two are framed from behind.
 
@@ -70,7 +70,7 @@ Erstellen Sie ein sehr realistisches und filmisches Bild mit Weitwinkelaufnahme.
         id: 4,
         name: '홍석준',
         title: ['무중력 왈츠', '중학생 소개'],
-        src: ['/assets/posters/hong1.jpg', '/assets/posters/4.jpg'],
+        src: ['/assets/posters/hong1.png', '/assets/posters/4.jpg'],
         prompt: ['', '']
     },
     {
