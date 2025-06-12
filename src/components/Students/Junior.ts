@@ -144,4 +144,14 @@ Erstellen Sie ein sehr realistisches und filmisches Bild mit Weitwinkelaufnahme.
         ,`
         `]
     },
+    {
+        id: 14,
+        name: '강규상',
+        title: ['티라미수사우루스', '알로하오예스사우루스'],
+        src: ['/assets/posters/kang1.png', '/assets/posters/kang2.png'],
+        prompt: [`
+        `
+        ,`
+        `]
+    },
 ]   

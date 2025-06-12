@@ -526,6 +526,12 @@
                 border-collapse: collapse;
                 padding: .5rem 1rem;
 
+                @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+                    &:nth-child(3) {
+                        text-wrap: nowrap;
+                    }
+                }
+
                 &:nth-child(2) {
                     flex: 6;
                 }
@@ -562,7 +568,7 @@
 
         input {
             flex: 1;
-            height: auto;
+            width: 100%; height: auto;
             border: 1px solid $color-text-gray;
             border-collapse: collapse;
             padding: .5rem 1rem;

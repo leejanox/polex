@@ -163,7 +163,7 @@ export const SeniorData2025: SeniorCardProps2[] = [
             title: "에어드로잉",
             category: "Motion Capture",
             team: "강규상",
-            skill: ["Python", "TensorFlow"],
+            skill: ["Python", "Mediapipe", "OpenCV"],
             date: "April, 2025 - May, 2025",
             remaining: "146 days more",
             imageUrl: [

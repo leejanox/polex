@@ -97,12 +97,9 @@ export const GuestBook = () => {
                             <td>{v.name}</td>
                             <td>{v.message}</td>
                             <td>{v.date.toDate().toLocaleString('ko-KR',{
-                                year: 'numeric',
-                                month: '2-digit',
-                                day: '2-digit',
-                                hour: '2-digit',
-                                minute: '2-digit',
-                                hour12: false,
+                                year: '2-digit',
+                                month: 'numeric',
+                                day: 'numeric'
                             })}
                             </td>
                             <td><Heart onClick={()=>handleLike(v.id)}/><span>{v.like}</span></td>
