@@ -191,7 +191,11 @@ export const SeniorData2025: SeniorCardProps2[] = [
                 "/assets/photos/sun.png",
             ],
             introduction: `
-                태양열에 따라다니며 에너지를 측정하는 추적기
+                태양열에 따라다니며 에너지를 측정하는 추적기입니다.
+
+                조도 센서를 달아 빛의 위치와 밝기를 감지하며 서보모터를 사용해 빛이 감지되는 방향으로 태양광 패널을 회전시켜 움직임을 제어하고,
+                
+                특정 주파스 이상의 빛을 감지하여 전기 에너지를 생성하는 자동 태양열 추적기입니다.
             `,
             links: ["https://eduino.kr/product/detail.html?product_no=5854&cate_no=181&display_group=1"],
         }
