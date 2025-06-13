@@ -188,14 +188,12 @@ export const SeniorData2025: SeniorCardProps2[] = [
             date: "March, 2025 - June, 2025",
             remaining: "146 days more",
             imageUrl: [
-                "/assets/temi/Temi_Loading.gif",
-                "/assets/temi/Temi_Response.gif",
-                "/assets/temi/Temi_Wait.gif"
+                "/assets/photos/sun.png",
             ],
             introduction: `
                 태양열에 따라다니며 에너지를 측정하는 추적기
             `,
-            links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
+            links: ["https://eduino.kr/product/detail.html?product_no=5854&cate_no=181&display_group=1"],
         }
     }
 ]
