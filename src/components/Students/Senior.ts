@@ -334,7 +334,7 @@ export const DetailCard_list: DetailCard_list = [
             subtitle: "Smart Reserve Army",
             category: "쾌적한 환경에서의 훈련",
             team: "홍석준",
-            skill: ["Unity", "VR","C++"],
+            skill: ["Unity", "VR","c#"],
             date: "2025년 4월 - 2025년 6월",
             youtube:'https://youtu.be/vU0HycI107Y',
             people: [
