@@ -118,16 +118,16 @@ export const SeniorData2025: SeniorCardProps2[] = [
     },
     {
         data: {
-            title: "VR",
+            title: "스마트 진지구축 훈련",
             category: "VR simulation ",
             team: "홍석준",
             skill: ["Unity", "C#", "VR","AR"],
             date: "March, 2025 - June, 2025",
             remaining: "146 days more",
             imageUrl: [
-                "/assets/temi/Temi_Loading.gif",
-                "/assets/temi/Temi_Response.gif",
-                "/assets/temi/Temi_Wait.gif"
+                "/assets/photos/vr1.png",
+                "/assets/photos/Temi_Response.gif",
+                "/assets/photos/Temi_Wait.gif"
             ],
             introduction: `
                 구식 예비군 훈련장 처럼 노후되거나 거리가 먼 곳이 아닌 가까운 사무실식 훈련장에서 예비군 훈련이 가능할 수 있도록 
@@ -176,7 +176,7 @@ export const SeniorData2025: SeniorCardProps2[] = [
             
             Mediapipe와 OpenCV를 활용하여 손의 좌표를 추적하고, 손가락의 펼침 상태에 따라 다양한 모드를 전환하여 사용자와의 상호작용을 구현했습니다.
             `,
-            links: ["https://github.com/praySI1070/program_language/tree/master/android/temi"],
+            links: ["https://github.com/Dev-Sxxngii"],
         }
     },
     {
@@ -336,7 +336,7 @@ export const DetailCard_list: DetailCard_list = [
             team: "홍석준",
             skill: ["Unity", "VR","C++"],
             date: "2025년 4월 - 2025년 6월",
-            youtube:'https://youtu.be/MJIkinJAzVI?si=GwBgLvCSllkhiIYW',
+            youtube:'https://youtu.be/vU0HycI107Y',
             people: [
                 {
                     name: `홍석준  [팀장] `,
@@ -368,7 +368,7 @@ export const DetailCard_list: DetailCard_list = [
             `,
             next:'에어드로잉',
             src: [
-                "/assets/photos/ansim2.png",
+                "/assets/photos/vr2.png",
                 "/assets/photos/ansim1.png",
                 "/assets/photos/ansim1.png"
             ]

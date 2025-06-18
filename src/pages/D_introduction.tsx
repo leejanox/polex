@@ -124,7 +124,7 @@ export const D_introduction = () => {
                     </div>
                     <div className={styles.linkContainer}>
                         <U_Button>
-                            <a href="https://www.kpu.ac.kr/kpu/index.do" target="_blank" rel="noreferrer noopener">
+                            <a href="https://www.kopo.ac.kr/chuncheon/content.do?menu=13704" target="_blank" rel="noreferrer noopener">
                                 <span>학과 홈페이지</span>
                                 <ArrowRight/>
                             </a>
