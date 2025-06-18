@@ -237,7 +237,7 @@ export const DetailCard_list: DetailCard_list = [
             team: "전석일 강규상",
             skill: ["Kotlin", "Python", "Java", "OpenAI API"],
             date: "March, 2025 - June, 2025",
-            youtube:'https://youtu.be/MJIkinJAzVI?si=GwBgLvCSllkhiIYW',
+            youtube:'https://youtu.be/n8_gn2C0uM4',
             people: [
                 {
                     name: `전석일 [팀장] `,
